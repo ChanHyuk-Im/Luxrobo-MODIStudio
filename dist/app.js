@@ -22,6 +22,8 @@ const appFolder = path.resolve(process.execPath, '..');
 const rootFolder = path.resolve(appFolder, '..');
 const exeName = path.basename(process.execPath);
 
+childProcess.exec('set GH_TOKEN=d58d8810f038f6b731a21b21c494485b0cb78ca2');
+
 autoUpdater.logger = log;
 autoUpdater.logger.transports.file.level = 'info';
 log.info('App starting...');
