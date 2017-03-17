@@ -1,6 +1,6 @@
 {
   "name": "MODIStudio",
-  "version": "0.5.3",
+  "version": "0.5.4",
   "description": "MODI Studio",
   "productName": "MODI Studio",
   "homepage": "http://www.luxrobo.com",
@@ -55,7 +55,7 @@
     "publish:win32": "build --windows --ia32 --publish always",
     "build:mac": "build --mac"
   },
-  "repository": "https://github.com/ChanHyuk-Im/squirrel-update-test-repo.git",
+  "repository": "https://github.com/ChanHyuk-Im/Luxrobo-MODIStudio.git",
   "build": {
     "appId": "com.luxrobo.modi-studio",
     "copyright": "Copyright ©LUXROBO Co., Ltd.",
@@ -85,7 +85,7 @@
       {
         "provider": "github",
         "owner": "ChanHyuk-Im",
-        "repo": "squirrel-update-test-repo",
+        "repo": "Luxrobo-MODIStudio",
         "token": "d58d8810f038f6b731a21b21c494485b0cb78ca2"
       }
     ],
