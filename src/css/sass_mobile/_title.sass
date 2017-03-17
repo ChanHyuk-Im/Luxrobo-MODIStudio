@@ -1,0 +1,131 @@
+$title-name-height: 24px
+$title-border-color: rgb(188, 188, 188)
+$title-background-color: rgb(250, 250, 250)
+$bordertitle-color: rgb(209, 209, 209)
+$guicui-text-color: rgb(0, 0, 0)
+
+$ratio: 1
+
+.main
+  > .title
+    width: 100%
+    height: 44px * $ratio
+    position: absolute
+    left: 0
+    top: 0
+    box-sizing: border-box
+    border-bottom: 1px solid $title-border-color
+    background: $title-background-color
+
+    .size
+      display: none
+
+      > .text
+        display: none
+
+    .reset
+      display: none
+
+      > .text
+        display: none
+
+    .commuBtn
+      display: none
+
+      > .text
+        display: none
+
+    .borderTitle
+      display: none
+
+    .guicui
+      width: 44px * $ratio
+      height: 44px * $ratio
+      position: absolute
+      right: 44px * $ratio
+      top: 0
+
+      > .image
+        width: 100%
+        height: 100%
+        position: absolute
+        top: 0
+        left: 0
+        background: url('../image_mobile/etc/gui.svg') no-repeat
+
+      > .text
+        display: none
+
+    .run
+      width: 44px * $ratio
+      height: 44px * $ratio
+      position: absolute
+      right: 0
+      top: 0
+
+      > .image
+        width: 100%
+        height: 100%
+        position: absolute
+        top: 0
+        left: 0
+        background-image: url('../image_mobile/etc/run.svg')
+
+      > .text
+        display: none
+
+      &.clickRun
+        > .image
+          background-image: url('../image_mobile/etc/runOn.svg')
+
+  .titleMenu
+    width: 44px * $ratio
+    height: 44px * $ratio
+    position: absolute
+    left: 0
+    top: 0
+    background-image: url('../image_mobile/menu.svg')
+
+    &.clickMenu
+      background-image: url('../image_mobile/menuOn.svg')
+
+  .titleLogo
+    width: 134px * $ratio
+    height: 44px * $ratio
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    background: url('../image_mobile/etc/logoMain.svg') no-repeat
+
+    > .text
+      display: none
+
+  .mapBtn
+    width: 44px * $ratio
+    height: 44px * $ratio
+    position: absolute
+    right: 8px * $ratio
+    top: 60px * $ratio
+    z-index: 2001
+    background-image: url('../image_mobile/etc/moduleMap.svg')
+
+    &.clickMapBtn
+      background-image: url('../image_mobile/etc/moduleMapOn.svg')
+
+  .titleName
+    display: none
+
+  .editorSetting
+    display: none
+
+    > .project
+      display: none
+
+    > .setting
+      display: none
+
+    > .help
+      display: none
+

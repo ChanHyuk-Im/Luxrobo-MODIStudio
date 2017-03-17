@@ -1,0 +1,23 @@
+{
+  "name": "MODIStudio",
+  "version": "0.5.3",
+  "productName": "MODI Studio",
+  "description": "MODI Studio",
+  "homepage": "http://www.luxrobo.com",
+  "main": "app.js",
+  "author": "LUXROBO Co., Ltd. <webmaster@luxrobo.com>",
+  "license": "CONFIDENTIAL",
+  "dependencies": {
+    "cross-zip": ">=2.1.4",
+    "decompress-zip": "^0.3.0",
+    "easy-zip": "^0.0.4",
+    "electron-log": "^2.0.0",
+    "electron-squirrel-startup": "^1.0.0",
+    "electron-updater": "^1.10.1",
+    "html2canvas": "^0.5.0-beta4"
+  },
+  "optionalDependencies": {
+    "7zip-bin-mac": "^1.0.1",
+    "7zip-bin-win": "^2.0.2"
+  }
+}

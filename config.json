@@ -1,0 +1,117 @@
+﻿{
+	"path": {
+		"js": {
+			"src": "src/js/*.js",
+			"dest": "dist/js/",
+			"filename": "ide.js"
+		},
+		"css": {
+			"src": "src/css/*.css",
+			"dest": "dist/css/",
+			"filename": "ide.css"
+		},
+        "sass": {
+            "src": "src/css/sass/*.sass",
+            "dest": "src/css/"
+        },
+        "sass_mobile": {
+            "src": "src/css/sass_mobile/*.sass",
+            "dest": "src/css/"
+        },
+        "html": {
+            "src": "src/html/index.html",
+            "srcs": "src/html/*.html",
+            "dest": "dist/"
+        },
+        "cordova": {
+            "project": "LuxRoTIDE/"
+        }
+	},
+	"browser": {
+		"root": "dist/",
+		"port": 19999,
+		"livereload": true
+	},
+    "bower": {
+        "path": "bower_components/",
+        "jquery-ui-css": {
+            "src": "jquery-ui/themes/base/jquery-ui.min.css",
+            "dest": "dist/css/"
+        },
+        "slide-pro-css": {
+            "src": "slider-pro/dist/css/slider-pro.min.css",
+            "dest": "dist/css/"
+        },
+        "slide-pro-cur": {
+            "src": "slider-pro/dist/css/images/*",
+            "dest": "dist/css/images/"
+        },
+        "jquery": {
+            "src": "jquery/dist/jquery.min.js",
+            "dest": "dist/js/"
+        },
+        "requirejs": {
+            "src": "requirejs/require.js",
+            "dest": "dist/js/"
+        },
+        "jquery-ui": {
+            "src": "jquery-ui/jquery-ui.min.js",
+            "dest": "dist/js/"
+        },
+        "jsPlumb": {
+            "src": "jsPlumb/dist/js/jsPlumb-2.1.4.js",
+            "dest": "dist/js/"
+        },
+        "jquery-sieve": {
+            "src": "jquery-sieve/dist/jquery.sieve.min.js",
+			"dest": "dist/js/"
+		},
+        "slider-pro": {
+            "src": "slider-pro/dist/js/jquery.sliderPro.min.js",
+            "dest": "dist/js/"
+        },
+        "ace-build": {
+            "src": "ace-build/src-min-noconflict/**/*.*",
+            "dest": "dist/js/ace/"
+        },
+        "nestable-sortable": {
+            "src": "../src/js/lib/nestable-sortable.js",
+            "dest": "dist/js/"
+        },
+        "colorpicker": {
+            "src": "../src/js/lib/jquery.wheelcolorpicker.js",
+            "dest": "dist/js/"
+        },
+        "colorpicker-css": {
+            "src": "../src/css/lib/wheelcolorpicker/wheelcolorpicker.css",
+            "dest": "dist/css/"
+        },
+        "colorpicker-image": {
+            "src": "../src/css/lib/wheelcolorpicker/images/*",
+            "dest": "dist/css/images/"
+        },
+        "hammerjs": {
+            "src": "hammerjs/hammer.js",
+            "dest": "dist/js/"
+        },
+        "touchpunch": {
+            "src": "jqueryui-touch-punch/jquery.ui.touch-punch.js",
+            "dest": "dist/js/"
+        },
+        "dygraph": {
+            "src": "dygraphs/dygraph-combined-dev.js",
+            "dest": "dist/js/"
+        },
+        "jQuery-contextMenu": {
+            "src": "jQuery-contextMenu/dist/jquery.contextMenu.js",
+            "dest": "dist/js/"
+        },
+        "jQuery-contextMenu-css": {
+            "src": "../src/css/lib/jquery.contextMenu.css",
+            "dest": "dist/css/"
+        }
+    },
+    "daemon": {
+        "name": "LuxRoTDaemon"
+    }
+}

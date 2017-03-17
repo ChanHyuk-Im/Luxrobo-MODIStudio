@@ -1,0 +1,47 @@
+﻿.main >
+  .menu >
+    .palette
+      @include set-palette-image(If)
+      @include set-palette-image(While)
+      @include set-palette-image(Loop)
+      @include set-palette-image(Break)
+      @include set-palette-image(Math)
+      @include set-palette-image(Delay)
+      @include set-palette-image(Random)
+      @include set-palette-image(Custom)
+      @include set-palette-image(Comment)
+
+      > ul
+        width: 100%
+        height: 100%
+        padding: 0
+        margin: 0
+        list-style-type: none
+
+        > li
+          > .item
+            width: 100%
+            height: 62px
+            margin-bottom: 20px
+            text-align: center
+
+            .image
+              width: 40px
+              height: 40px
+              margin:
+                left: 20px
+                bottom: 6px
+
+
+            .text
+              width: 80px
+              height: 12px
+              text-align: center
+              line-height: 12px
+              font-size: 12px
+              color: $white-color
+              cursor: default
+
+      .dd-placeholder
+        display: none !important
+

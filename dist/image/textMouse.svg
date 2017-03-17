@@ -1,0 +1,13 @@
+<svg id="레이어_1" data-name="레이어 1" xmlns="http://www.w3.org/2000/svg" width="8" height="56" viewBox="0 0 8 56">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #26cad3;
+      }
+    </style>
+  </defs>
+  <title>textMouse</title>
+  <rect class="cls-1" x="3" width="2" height="56"/>
+  <rect class="cls-1" width="8" height="2"/>
+  <rect class="cls-1" y="54" width="8" height="2"/>
+</svg>

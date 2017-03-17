@@ -1,0 +1,1448 @@
+input
+  font-family: 'RotFont'
+
+.blockBackground
+  background-repeat: no-repeat
+  width: 68px * $ratio
+  height: 20px * $ratio
+  position: absolute
+  margin-left: 68px * $ratio
+  margin-top: 14px * $ratio
+
+.block
+  display: inline-block
+  border: 1px solid $editor-box-font-color
+  border-radius: 3px
+  position: relative
+  white-space: nowrap
+  background-color: $white-color
+  box-sizing: border-box
+  margin:
+    right: 100px * $ratio
+    bottom: 0
+
+  &[data-rootstate='always']
+    .blockBackground
+      background-image: url('../image_mobile/block/conditionText.svg')
+
+  &[data-rootstate='condition']
+    .blockBackground
+      background-image: url('../image_mobile/block/conditionText.svg')
+
+  &:not([data-rootstate])
+    .blockBackground
+      background-image: url('../image_mobile/block/conditionText.svg')
+
+  .blockWrapper
+    min-width: 181px * $ratio
+    min-height: 44px * $ratio
+    display: inline-block
+    position: absolute
+    box-sizing: border-box
+    padding: 3px * $ratio
+    padding-right: 6px
+
+  .ifBlockWrapper
+    display: inline-block
+
+  .whileBlockWrapper
+    display: inline-block
+
+  .content
+    min-width: 128px * $ratio
+    min-height: 44px * $ratio
+    display: inline-block
+    position: absolute
+    top: -2px
+    left: 47px * $ratio
+    font-size: 11px * $ratio
+    line-height: 44px * $ratio
+    white-space: nowrap
+
+    .icon
+      min-width: 29px * $ratio
+      height: 29px * $ratio
+      background-repeat: no-repeat
+      background-position-x: center
+
+    .loopAndDelayArr
+      float: left
+
+    .loopAndDelayArr1
+      min-width: 60px * $ratio
+      height: 44px * $ratio
+      margin-right: 5px * $ratio
+      text-align: right
+      line-height: 44px * $ratio
+
+    .loopAndDelayArr2
+      width: 38px * $ratio
+      height: 44px * $ratio
+      text-align: center
+      line-height: 44px * $ratio
+
+    .numberArr
+      float: left
+
+    .numberArr1
+      width: 140px * $ratio
+      height: 55px * $ratio
+      margin-right: 5px * $ratio
+      line-height: 55px * $ratio
+
+    .randomMin
+      height: 25px * $ratio
+      margin-right: 5px * $ratio
+      text-align: center
+
+    .randomMax
+      height: 25px * $ratio
+      margin-right: 5px * $ratio
+      text-align: center
+
+    .randomVariable
+      height: 25px * $ratio
+      margin-right: 5px * $ratio
+      text-align: center
+
+    .randomBelow
+      min-width: 10px * $ratio
+      height: 25px * $ratio
+      text-align: center
+
+    .arr
+      display: inline-block
+      float: left
+      margin-right: 6px * $ratio
+      font-size: 11px * $ratio
+      pointer-events: none
+
+    .moduleArr
+      width: 100%
+      text-align: center
+
+    .andor
+      width: 57px * $ratio
+      height: 44px * $ratio
+      text-align: center
+      margin-left: 6px * $ratio
+      background-repeat: no-repeat
+
+    .module
+      height: $module-height
+      margin-top: 3px * $ratio
+
+    .buttonIcon
+      background-image: url('../image_mobile/icon29/button.svg')
+
+    .displayIcon
+      background-image: url('../image_mobile/icon29/display.svg')
+
+    .gyroIcon
+      background-image: url('../image_mobile/icon29/gyro.svg')
+
+    .irIcon
+      background-image: url('../image_mobile/icon29/ir.svg')
+
+    .ledIcon
+      background-image: url('../image_mobile/icon29/led.svg')
+
+    .micIcon
+      background-image: url('../image_mobile/icon29/mic.svg')
+
+    .motorIcon
+      background-image: url('../image_mobile/icon29/motor.svg')
+
+    .networkIcon
+      background-image: url('../image_mobile/icon29/network.svg')
+
+    .speakerIcon
+      background-image: url('../image_mobile/icon29/speaker.svg')
+
+    .environmentIcon
+      background-image: url('../image_mobile/icon29/environment.svg')
+
+    .ultrasonicIcon
+      background-image: url('../image_mobile/icon29/ultrasonic.svg')
+
+    .dialIcon
+      background-image: url('../image_mobile/icon29/dial.svg')
+
+    .propIcon
+      background-image: url('../image_mobile/icon29/prop.svg')
+
+    .varIcon
+      background-image: url('../image_mobile/icon29/var.svg')
+
+    .iconName
+      height: 9px * $ratio
+      font-size: 9px * $ratio
+      text-align: center
+      line-height: 9px * $ratio
+
+    .prop
+      height: 44px * $ratio
+      margin-right: 4px * $ratio
+      line-height: 44px * $ratio
+
+    .sign
+      width: 20px * $ratio
+      height: 20px * $ratio
+      background-repeat: no-repeat
+      background-position: 50%
+      margin-top: 12px * $ratio
+      margin-left: 6px * $ratio
+      margin-right: 10px * $ratio
+
+  .contentOn
+    top: -3px
+    left: 46px
+
+  div
+    &:not(.switch)
+      &:not(.exit)
+        pointer-events: none
+
+  .exit
+    width: 22px * $ratio
+    height: 22px * $ratio
+    position: absolute
+    right: -2px
+    top: -2px
+    display: none
+    background-image: url('../image_mobile/block/boxExit.svg')
+
+.blockOn
+  border: 2px solid $luxrobo-color
+
+.ifBlock
+  min-height: $block-height
+  min-width: $block-width
+
+.whileBlock
+  min-height: $block-height
+  min-width: $block-width
+
+.loopBlock
+  min-width: $block-width
+  min-height: $block-height
+
+.delayBlock
+  min-width: $block-width
+  min-height: $block-height
+
+.customBlock
+  min-width: 195px * $ratio
+  min-height: 55px * $ratio
+
+  .blockWrapper
+    .image
+      background: url('../image_mobile/block/boxCustom.svg') no-repeat
+
+.dd-item
+  &:not(.output)
+    .block
+      .image
+        display: inline-block
+        width: 38px * $ratio
+        height: 38px * $ratio
+        margin-right: 6px * $ratio
+        position: absolute
+
+  &.output
+    .block
+      .image
+        width: 30px * $ratio
+        height: 30px * $ratio
+        position: absolute
+        top: 3px * $ratio
+        left: 8px * $ratio
+        margin-right: 6px * $ratio
+        display: inline-block
+
+      .name
+        width: 40px * $ratio
+        text-align: center
+        line-height: 12px
+        font-size: 9px
+        position: absolute
+        bottom: 3px
+
+  &:not(.blockRoot)
+    .content
+      .andor
+        margin-top: 1px
+
+.blockWrapper
+  .ifImage
+    background: url('../image_mobile/block/boxIf.svg') no-repeat
+
+  .whileImage
+    background: url('../image_mobile/block/boxWhile.svg') no-repeat
+
+  .loopImage
+    background: url('../image_mobile/block/boxLoop.svg') no-repeat
+
+  .numberImage
+    background: url('../image_mobile/icon38/number.svg') no-repeat
+
+  .motorImage
+    background: url('../image_mobile/icon29/motor.svg') no-repeat
+
+  .ledImage
+    background: url('../image_mobile/icon29/led.svg') no-repeat
+
+  .displayImage
+    background: url('../image_mobile/icon29/display.svg') no-repeat
+
+  .speakerImage
+    background-image: url('../image_mobile/icon29/speaker.svg')
+    
+  .delayImage
+    background: url('../image_mobile/block/boxDelay.svg') no-repeat
+
+  .randomImage
+    background: url('../image_mobile/icon38/random.svg') no-repeat
+
+.breakBlock
+  min-width: $block-width
+  min-height: $block-height
+
+  .breakBlockBackground
+    background-repeat: no-repeat
+    width: 68px
+    height: 20px
+    position: absolute
+    margin:
+      left: 88px
+      right: 0
+      top: 14px
+    background-image: url('../image_mobile/block/breakText.svg')
+
+  .blockWrapper
+    .image
+      background: url('../image_mobile/block/boxBreak.svg') no-repeat
+
+.commentBlock
+  .blockWrapper
+    .image
+      background: url('../image_mobile/block/boxComment.svg') no-repeat
+
+.blockConditionBox
+  &[data-state='1']
+    width: 100%
+    position: absolute
+    top: 0
+    left: 0
+    background-color: $white-color
+    white-space: nowrap
+    z-index: 2001
+    overflow: hidden
+
+    .boxBottomWrapper
+      width: 100%
+
+      .boxList
+        height: 100%
+
+      .boxHelp
+        display: none
+
+  .boxWrapper
+    height: 88px * $ratio
+    text-align: center
+    font-size: 11px
+    background: $mobile-modulebox-background-color
+    box-sizing: border-box
+    border-bottom: 1px solid $editor-boxlist-color
+
+    .randomMin
+      .textBox
+        font-size: 11px
+        width: 100%
+        height: 28px * $ratio
+        margin: $editor-box-margin-top 0
+
+    .randomText
+      width: 50px * $ratio
+      margin: 20.5px 0
+
+    .arr
+      width: percentage(118/375)
+      height: 28px * $ratio
+      display: inline-block
+      float: left
+
+      .textBox
+        &[data-isselected='true']
+          outline: 1px solid $editor-box-border-color
+          background-color: $white-color
+          border: 0
+
+    .colorArr
+      margin-right: 10px * $ratio
+
+    .brightnessArr
+      margin-right: 10px * $ratio
+
+    .moduleArr
+      margin-right: 10px * $ratio
+
+    .andOr
+      width: 42px * $ratio
+      height: 28px * $ratio
+
+      .toggle
+        width: 30px * $ratio
+        height: 28px * $ratio
+        margin: $editor-box-margin-top 6px $editor-box-margin-top 8px
+        background-color: $mobile-modulebox-background-color
+        border: 0
+        outline: 0
+        font-size: 11px
+
+      .triangle
+        width: 0
+        height: 0
+        margin: $editor-box-then-margin-top 5px $editor-box-then-margin-top 8px
+        border-bottom: 5px solid $luxrobo-color
+        border-left: 5px solid $luxrobo-color
+        border-top: 5px solid transparent
+        border-right: 5px solid transparent
+        position: relative
+        top: -35px
+        pointer-events: none
+
+    .equal
+      width: 10px * $ratio
+      height: 10px * $ratio
+      line-height: 10px * $ratio
+      margin: ($box-wrapper-height - 10) / 2 0
+
+    &:not(.outputBlock)
+      .boxType
+        width: 28px * $ratio
+        height: 44px * $ratio
+        line-height: 44px * $ratio
+        margin: 0 6px 0 8px
+        font-size: 11px
+
+    .loopAndDelayArr1
+      .textBox
+        &[data-isselected='true']
+          outline: 1px solid $editor-box-font-color
+          background-color: $white-color
+          border: 0
+
+    .loopAndDelayTimes
+      width: 50px * $ratio
+      height: 14px * $ratio
+      margin: ($box-wrapper-height - 14) / 2 0
+
+    .numberArr1
+      .textBox
+        &[data-isselected='true']
+          outline: 1px solid $editor-box-font-color
+
+    .randomBoxType
+      width: 70px * $ratio
+      height: 14px * $ratio
+      margin: ($box-wrapper-height - 14) / 2 0
+
+    .textBox
+      font-size: 11px * $ratio
+      width: 100%
+      height: 28px * $ratio
+      padding: 1px $text-padding-side
+      box-sizing: border-box
+      margin-top: $editor-box-margin-top
+      background: $white-color
+      outline: 0
+      border: 1px solid $editor-box-border-color
+      color: $editor-box-font-color
+
+      &:focus
+        border: 1px solid $luxrobo-color
+
+    .text
+      display: inline-block
+      vertical-align: middle
+      text-align: left
+      text-orientation: mixed
+      line-height: 30px
+
+    .is
+      width: percentage(8/375)
+      height: 44px * $ratio
+      line-height: 44px * $ratio
+      margin: 0 6px
+      font-size: 11px * $ratio
+
+    .arr2
+      width: percentage(33/375)
+      height: 28px * $ratio
+
+    .buttonBox
+      width: 100%
+      height: 28px
+      margin: $editor-box-margin-top 0
+      text-align: center
+      box-sizing: border-box
+
+    .arr3
+      margin: 0 6px
+
+    .plus
+      width: 22px * $ratio
+      height: 36px * $ratio
+
+      .image
+        width: 100%
+        height: 100%
+        padding-right: 8px * $ratio
+        background-image: url('../image_mobile/editorEtc/plus.svg')
+        background-repeat: no-repeat
+        background-size: 22px 22px
+        background-position: 0 (($box-wrapper-height) - 20) / 2
+
+        &.clickPluse
+          background-image: url('../image_mobile/editorEtc/plusOn.svg')
+
+    .minus
+      width: 22px * $ratio
+      height: 36px * $ratio
+
+      .image
+        width: 100%
+        height: 100%
+        padding-right: 8px * $ratio
+        background-image: url('../image_mobile/editorEtc/minus.svg')
+        background-repeat: no-repeat
+        background-size: 22px 22px
+        background-position: 0 (($box-wrapper-height) - 20) / 2
+
+        &.clickMinus
+          background-image: url('../image_mobile/editorEtc/minusOn.svg')
+
+    .then
+      width: 60px * $ratio
+      height: 28px * $ratio
+      margin: $editor-box-then-margin-top 8px $editor-box-then-margin-top 0
+      background: $editor-comment-text-color
+      border-radius: 2px
+      color: $white-color
+      line-height: 28px * $ratio
+      text-align: center
+      font-size: 14px * $ratio
+      float: right
+
+      &.clickThen
+        background: $luxrobo-color
+
+    .ok
+      width: 60px * $ratio
+      height: 28px * $ratio
+      margin: $editor-box-margin-top 8px $editor-box-margin-top 0
+      background: $editor-comment-text-color
+      border-radius: 2px
+      color: $white-color
+      line-height: 28px * $ratio
+      text-align: center
+      float: right
+      font-size: 14px * $ratio
+
+      &.clickOk
+        background: $luxrobo-color
+
+    &:first-child
+      .plus
+        display: block
+
+    &.outputBlock
+      > .boxType
+        display: none
+
+      > .name
+        width: percentage(79/375)
+        height: 28px * $ratio
+        line-height: 30px * $ratio
+        text-align: left
+        margin: $editor-box-margin-top 6px $editor-box-margin-top 8px
+        font-size: 11px * $ratio
+
+      > .color
+        display: none
+
+      > .what
+        display: none
+
+      > .property
+        width: percentage(87/375)
+        height: 44px * $ratio
+        margin-right: 6px * $ratio
+
+      > .rgb
+        width: percentage(87/375)
+        height: 44px * $ratio
+        margin-right: 6px * $ratio
+
+      > .data
+        width: percentage(87/375)
+        height: 44px * $ratio
+        margin-right: 6px * $ratio
+
+      > .value
+        width: percentage(87/375)
+        height: 44px
+        margin-right: 6px * $ratio
+
+      > .upper
+        width: percentage(87/375)
+        margin-right: 6px * $ratio
+
+      > .bottom
+        width: percentage(87/375)
+
+      > .frequency
+        width: percentage(87/375)
+        margin-left: 6px * $ratio
+        margin-right: 0
+
+      > .volume
+        width: percentage(87/375)
+        margin-left: 6px * $ratio
+        margin-right: 0
+  
+  .title
+    width: 100%
+    height: 44px
+    background: $color250
+    box-sizing: border-box
+    border-bottom: 1px solid $outline-color
+
+    > .image
+      width: 100%
+      height: 100%
+
+    > .goback
+      width: 44px
+      height: 44px
+      position: absolute
+      top: 0
+      left: 0
+      font-size: 0px
+      background-image: url(../image_mobile/back.svg)
+
+      &.clickGoback
+        background-image: url('../image_mobile/backOn.svg')
+
+  .blue
+    margin-right: 8px * $ratio
+
+  .basicText
+    width: 70px * $ratio
+    height: 70px * $ratio
+    position: absolute
+    top: 205px * $ratio
+    font-size: 14px * $ratio
+    text-align: center
+    line-height: 14px * $ratio
+
+  .basicBackground
+    width: 70px * $ratio
+    height: 70px * $ratio
+    position: absolute
+    border-radius: 8px
+    background: $white-color
+
+    &:hover
+      background: $luxrobo-color
+
+  .basicBackgroundClick
+    background: $luxrobo-color
+
+  .basic
+    width: 70px * $ratio
+    height: 70px * $ratio
+    position: absolute
+    border-radius: 8px
+
+  .basicRed
+    background: url('../image_mobile/block/ledRed.svg')
+
+  .basicGreen
+    background: url('../image_mobile/block/ledGreen.svg')
+
+  .basicBlue
+    background: url('../image_mobile/block/ledBlue.svg')
+
+  .basicWhite
+    background: url('../image_mobile/block/ledWhite.svg')
+
+  .basicOff
+    background: url('../image_mobile/block/ledOff.svg')
+
+  .colorSelect
+    width: 64px * $ratio
+    height: 210px * $ratio
+    position: absolute
+    right: 0
+    top: 56px * $ratio
+    background: url('../image_mobile/block/ledPalette.svg')
+
+  &[data-state='motor1']
+    width: 100%
+    position: absolute
+    top: 0
+    left: 0
+    white-space: nowrap
+    z-index: 2001
+    overflow: hidden
+    background-color: $white-color
+
+    .boxBottomWrapper
+      width: 100%
+
+      .boxList
+        height: 100%
+
+      .boxHelp
+        display: none
+
+    .upperbox
+      background-color: $outline-color
+
+    .bottombox
+      background-color: $outline-color
+
+    .animationUpper
+      @include animation-upper
+
+    .ok
+      margin-top: 18px * $ratio
+
+  &[data-state='speaker']
+    width: 100%
+    position: absolute
+    top: 0
+    left: 0
+    white-space: nowrap
+    z-index: 2001
+    overflow: hidden
+    background-color: $white-color
+
+    .boxBottomWrapper
+      width: 100%
+
+      .boxList
+        height: 100%
+
+      .boxHelp
+        display: none
+  
+  &[data-state='display']
+    width: 100%
+    position: absolute
+    top: 0
+    left: 0
+    white-space: nowrap
+    z-index: 2001
+    overflow: hidden
+    background-color: $white-color
+
+    .boxWrapper
+      > .what
+        width: percentage(87/375)
+        height: 44px * $ratio
+        margin-right: 6px * $ratio
+        display: initial
+
+    .boxBottomWrapper
+      width: 100%
+
+      .boxList
+        height: 100%
+
+      .boxHelp
+        display: none
+
+  .loopAndDelayArr
+    display: inline-block
+    float: left
+
+  .loopAndDelayArr1
+    .textBox
+      font-size: 14px * $ratio
+      width: 40px * $ratio
+      height: 30px * $ratio
+
+  .outputBlock
+    .name
+      width: 100px * $ratio
+      line-height: 30px * $ratio
+      text-overflow: ellipsis
+      text-align: center
+      // margin-right: 10px
+
+  .signBox
+    background: $white-color
+    border: 1px solid $editor-box-border-color
+
+    &:focus
+      outline: none
+      border: 1px solid $luxrobo-color
+
+  &[data-state='led']
+    width: 100%
+    position: absolute
+    top: 0
+    left: 0
+    white-space: nowrap
+    z-index: 2001
+    overflow: hidden
+    background-color: $white-color
+
+    .boxBottomWrapper
+      width: 100%
+
+      .boxList
+        height: 100%
+
+      .boxHelp
+        display: none
+
+.textVariableBox
+  width: 80px * $ratio
+  font-size: 14px * $ratio
+  height: 24px * $ratio
+  padding: 1px 5px
+  margin: 12.5px 0 12.5px 5px
+  background: $white-color
+  box-sizing: border-box
+  outline: 0
+  color: $black-color
+  border: 1px solid $editor-box-border-color
+
+  &:focus
+    border: 1px solid $luxrobo-color
+
+.editor
+  ul
+    &.dd-list
+      margin-bottom: 100px * $ratio
+      background-repeat: repeat-y
+      background-position: 49px * $ratio
+
+      &:not(.root)
+        margin-bottom: 0
+        background-image: url('../image_mobile/block/vline.svg')
+
+        .dd-item
+          &:not(.tempList)
+            &:not(.helper)
+              z-index: 1
+              min-height: 49px * $ratio
+              background: url('../image_mobile/block/node.svg')
+              background-repeat: no-repeat
+              background-position: 1px -3px
+
+          &:last-child
+            &:not(.tempList)
+              &:not(.helper)
+                background: $white-color url('../image_mobile/block/lastnode.svg')
+                background-repeat: no-repeat
+                background-position: 1px -3px
+
+        .dd-placeholder
+          &:not(.tempList)
+            &:not(.helper)
+              z-index: 1
+              min-height: 48px * $ratio
+              background: url('../image_mobile/block/node.svg')
+              background-repeat: no-repeat
+              background-position: 1px -3px
+
+          &:last-child
+            &:not(.tempList)
+              &:not(.helper)
+                background: $white-color url('../image_mobile/block/lastnode.svg')
+                background-repeat: no-repeat
+                background-position: 1px -3px
+
+  .dd-item
+    &:not(.blockRoot)
+      .and
+        background-image: url('../image_mobile/block/and.svg')
+
+      .or
+        width: 46px * $ratio
+        background-image: url('../image_mobile/block/or.svg')
+
+      .andOn
+        background-image: url('../image_mobile/block/andOn.svg')
+
+      .orOn
+        width: 46px * $ratio
+        background-image: url('../image_mobile/block/orOn.svg')
+
+      .arrow
+        width: 9px * $ratio
+        height: 4px * $ratio
+        position: absolute
+        left: 44px * $ratio
+        bottom: -5px * $ratio
+        background-image: url('../image_mobile/editorEtc/triangle.svg')
+
+      .arrowOn
+        bottom: -6px
+        left: 43px
+
+  .root
+    > .dd-item
+      &:not(.tempList)
+        &:not(.helper)
+          background: url('')
+
+  .comment
+    width: 160px
+    height: 100px
+    position: absolute
+    border: 1px solid $editor-box-font-color
+    background: $editor-box-border-color
+    border-radius: 4px * $ratio
+    box-sizing: border-box
+    padding: 0 10px
+    margin-bottom: 50px * $ratio
+
+    .title
+      width: 100%
+      height: 17px * $ratio
+      position: absolute
+      left: 0
+      top: 0
+      font-size: 12px * $ratio
+      line-height: 17px * $ratio
+      box-sizing: border-box
+      padding: 0 10px * $ratio
+      color: $editor-comment-text-color
+
+      .text
+        width: 100%
+        height: 100%
+        float: left
+        box-sizing: border-box
+        cursor: default
+        border-bottom: 1px solid $editor-box-font-color
+
+      .exit
+        width: 17px * $ratio
+        height: 17px * $ratio
+        position: absolute
+        right: 0
+        top: 0
+        background: url('../image_mobile/editorEtc/commentExit.svg') no-repeat
+
+    .body
+      width: 100%
+      height: 100%
+      position: absolute
+      left: 0
+      bottom: 0
+      box-sizing: border-box
+      border-radius: 0 0 4px 4px
+      padding-top: 17px * $ratio
+
+      .commentText
+        @include scrollbar(6px, 10px, 6px, $editor-box-border-color, $editor-box-font-color, $editor-box-border-color)
+        width: 100%
+        height: 100%
+        float: left
+        left: 0
+        top: 0
+        background: $editor-box-border-color
+        border: 0
+        outline: 0
+        margin: 0
+        padding: 0 10px 5px
+        color: $editor-comment-text-color
+        border-radius: 0 0 4px 4px
+        box-sizing: border-box
+
+        &:focus
+          outline: 0
+          border: 0
+          box-shadow: none
+
+    .resize
+      width: 15px * $ratio
+      height: 15px * $ratio
+      position: absolute
+      right: 5px * $ratio
+      bottom: 5px * $ratio
+      background: url('../image_mobile/editorEtc/commentResize.svg') no-repeat
+
+.dd-list
+  &:not(.modulemap)
+    .dd-handle
+      min-width: 181px * $ratio
+      min-height: 44px * $ratio
+
+li
+  &.motorBlock
+    .boxWrapper
+      .boxType
+        width: 20px * $ratio
+        height: 20px * $ratio
+        margin:
+          top: 17px * $ratio
+          left: 10px * $ratio
+          right: 10px * $ratio
+        font-size: 11px * $ratio
+        background-image: url('../image_mobile/icon38/motor.svg')
+        background-repeat: no-repeat
+
+  &.ledBlock
+    .boxWrapper
+      .boxType
+        width: 20px * $ratio
+        height: 20px * $ratio
+        margin:
+          top: 17px * $ratio
+          left: 10px * $ratio
+          right: 10px * $ratio
+        font-size: 11px * $ratio
+        background-image: url('../image_mobile/icon38/led.svg')
+        background-repeat: no-repeat
+
+  &.mathBlock
+    > .blockConditionBox
+      width: 100%
+      position: absolute
+      top: 0
+      left: 0
+      white-space: nowrap
+      z-index: 2001
+
+      .boxWrapper
+        .mathBoxVariable
+          width: percentage(70/375)
+          height: 44px * $ratio
+          margin: 0 6px 0 8px
+
+        .textVariableBox
+          width: 100%
+          height: 28px * $ratio
+          margin: $editor-box-margin-top 0
+          outline: 0
+          color: $black-color
+          border: 1px solid $editor-box-border-color
+          font-size: 11px * $ratio
+
+          &:focus
+            border: 1px solid $luxrobo-color
+
+        .formular
+          width: percentage(266/375)
+          margin-left: 6px
+
+        .ok
+          margin-top: 20px * $ratio
+
+      .boxBottomWrapper
+        width: 470px * $ratio
+        height: 240px * $ratio
+        background: $white-color
+
+        .textVariableBox
+          width: 37px
+          outline: 0
+          color: $editor-box-font-color
+          border: 1px solid $editor-box-border-color
+          font-size: 14px
+
+          &:focus
+            border: 1px solid $luxrobo-color
+
+.mathBlock
+  .blockBackground
+    background-image: url('../image_mobile/block/conditionText.svg')
+
+  .blockWrapper
+    .image
+      background: url('../image_mobile/icon38/math.svg') no-repeat
+
+  .boxBottomWrapper
+    .boxMathPanel
+      display: none
+
+      .mathPanelLeftButtons
+        width: 80px * $ratio
+        height: 60px * $ratio
+        padding: 0
+        background: $editor-boxlist-color
+        display: inline-block
+        border-bottom: 1px solid $editor-box-font-color
+        border-right: 1px solid $editor-box-font-color
+        box-sizing: border-box
+
+        &:hover
+          background: $editor-box-hover-color
+
+        &:active
+          background: $editor-box-font-color
+
+      .mathPanelRightButtons
+        width: 80px * $ratio
+        height: 60px * $ratio
+        padding: 0
+        background: $editor-box-border-color
+        display: inline-block
+        box-sizing: border-box
+        border-bottom: 1px solid $editor-box-font-color
+
+        &:hover
+          background: $editor-box-hover-color
+
+        &:active
+          background: $editor-box-font-color
+
+      .mathBackspace
+        border-bottom: 0
+
+      .math0
+        border-bottom: 0
+
+      .mathDot
+        border-bottom: 0
+
+      .mathMinus
+        border-bottom: 0
+        border-radius: 0 0 4px
+
+    .boxList
+      @include scrollbar(6px, 10px, 6px, $white-color, $scrollbar-color, $white-color)
+      width: 100%
+      height: 100%
+      display: inline-block
+      float: left
+      background: $white-color
+      overflow-x: hidden
+      overflow-y: auto
+      white-space: nowrap
+
+      .listGradation
+        display: none
+        position: absolute
+        bottom: 0
+        width: 142px * $ratio
+        height: 30px * $ratio
+        background: linear-gradient(to top, $visible-white-color, $invisible-color)
+
+  > .blockConditionBox
+    .boxWrapper
+      .textBox
+        @include editor-placeholder-color
+        font-size: 11px * $ratio
+        box-sizing: border-box
+        margin: $editor-box-margin-top 0
+        background: $white-color
+        outline: 0
+        border: 1px solid $editor-box-border-color
+
+        &:focus
+          border: 1px solid $luxrobo-color
+
+  .mathPanelLeftButtons
+    text-align: center
+    line-height: 60px * $ratio
+
+  .mathButtonBackground
+    width: 16px * $ratio
+    height: 16px * $ratio
+    margin: 22px 32px
+
+  .mathDivide
+    .mathButtonBackground
+      background-image: url('../image_mobile/editorEtc/mathDivision.svg')
+
+  .mathMulti
+    .mathButtonBackground
+      background-image: url('../image_mobile/editorEtc/mathMultiply.svg')
+
+  .mathPlus
+    .mathButtonBackground
+      background-image: url('../image_mobile/editorEtc/mathPlus.svg')
+
+  .mathMinus
+    .mathButtonBackground
+      background-image: url('../image_mobile/editorEtc/mathMinus.svg')
+
+  .mathBackspace
+    .mathButtonBackground
+      background-image: url('../image_mobile/editorEtc/mathDelete.svg')
+
+.randomBlock
+  .block
+    width: 190px * $ratio
+
+    .blockWrapper
+      .content
+        width: 140px * $ratio
+
+  .blockConditionBox
+    width: 100%
+    height: 100%
+    background-color: $white-color
+    position: absolute
+    top: 0
+    left: 0
+    white-space: nowrap
+    z-index: 2001
+
+  .boxWrapper
+    .randomBoxVariable
+      width: 80px * $ratio
+      height: 44px * $ratio
+      margin: 0 6px 0 8px
+
+      .textVariableBox
+        width: 100%
+        height: 28px * $ratio
+        margin: $editor-box-margin-top 0
+        font-size: 11px * $ratio
+
+    .randomText
+      width: 25px * $ratio
+      height: 28px * $ratio
+      line-height: 28px * $ratio
+      margin: $editor-box-margin-top 0
+      font-size: 11px * $ratio
+
+    .randomMin
+      width: 80px * $ratio
+      height: 44px * $ratio
+      margin: 0 6px
+
+    .randomTilde
+      width: 11px * $ratio
+      height: 28px * $ratio
+      line-height: 28px * $ratio
+      margin: $editor-box-margin-top 6px $editor-box-margin-top 0
+
+    .randomMax
+      width: 80px * $ratio
+      height: 44px * $ratio
+      margin: 0 6px
+
+      .textBox
+        width: 100%
+        height: 28px * $ratio
+        margin: $editor-box-margin-top 0
+        font-size: 11px
+
+.numberBlock
+  > .blockConditionBox
+    width: 100%
+    height: 100%
+    background-color: $white-color
+    position: absolute
+    top: 0
+    left: 0
+    white-space: nowrap
+    margin-bottom: 5px
+    z-index: 2001
+
+    .boxWrapper
+      .boxType
+        width: 50px * $ratio
+        height: 28px * $ratio
+        line-height: 28px * $ratio
+        margin: $editor-box-margin-top 6px $editor-box-margin-top 8px
+        font-size: 11px * $ratio
+
+    .numberArr1
+      width: 80px * $ratio
+      height: 100%
+
+      .textBox
+        width: 100%
+        height: 28px * $ratio
+        margin: $editor-box-margin-top 6px $editor-box-margin-top 0
+        outline: 0
+        color: $editor-box-font-color
+        border: 1px solid $editor-box-border-color
+        font-size: 11px * $ratio
+
+        &:focus
+          border: 1px solid $luxrobo-color
+
+.loopAndDelayBlock
+  > .blockConditionBox
+    width: 100%
+    height: 100%
+    background-color: $white-color
+    position: absolute
+    top: 0
+    left: 0
+    white-space: nowrap
+    z-index: 2001
+
+    .boxWrapper
+      .boxType
+        width: 30px * $ratio
+        height: 30px * $ratio
+        line-height: 30px * $ratio
+        margin: $editor-box-margin-top 6px $editor-box-margin-top 8px
+        font-size: 11px * $ratio
+
+    .loopAndDelayArr1
+      width: 80px * $ratio
+      height: 100%
+
+      .textBox
+        width: 100%
+        height: 28px * $ratio
+        margin: $editor-box-margin-top 6px editor-box-margin-top 0
+        outline: 0
+        color: $editor-box-font-color
+        border: 1px solid $editor-box-border-color
+        font-size: 11px * $ratio
+
+        &:focus
+          border: 1px solid $luxrobo-color
+
+    .loopAndDelayTimes
+      width: auto
+      height: 28px * $ratio
+      line-height: 28px * $ratio
+      margin: $editor-box-margin-top 0 $editor-box-margin-top 6px
+      font-size: 11px * $ratio
+
+.gui
+  position: absolute
+  top: 0
+  left: 0
+  box-sizing: border-box
+  padding:
+    top: 16px * $ratio
+    left: 8px * $ratio
+
+
+  .basicBox
+    .boxWrapper
+      .textBox
+        @include editor-placeholder-color
+        color: $black-color
+
+.boxBottomWrapper
+  .boxHelp
+    display: none
+
+  .boxList
+    @include scrollbar(6px, 10px, 6px, $white-color, $scrollbar-color, $white-color)
+    width: 100%
+    height: 100%
+    position: absolute
+    left: 0
+    display: inline-block
+    overflow-x: hidden
+    overflow-y: auto
+    white-space: nowrap
+
+    .listElement
+      width: 100%
+      min-height: 50px * $ratio
+      border-bottom: 1px solid $editor-boxlist-color
+
+      &:hover
+        background: $editor-box-hover-color
+
+      .icon
+        margin-left: 8px * $ratio
+        margin-right: 16px * $ratio
+        margin-top: 11px * $ratio
+        margin-bottom: 10px * $ratio
+        width: 29px * $ratio
+        height: 29px * $ratio
+        display: inline-block
+        float: left
+        background-repeat: no-repeat
+        pointer-events: none
+
+      .name
+        width: 97px * $ratio
+        height: 50px * $ratio
+        display: inline-block
+        line-height: 50px * $ratio
+        font-size: 18px * $ratio
+
+    .subList
+      margin-left: 0
+      overflow: hidden
+      transition: height .2s
+
+    .listGradation
+      display: none
+      position: absolute
+      bottom: 0
+      width: 142px * $ratio
+      height: 30px * $ratio
+      background: linear-gradient(to top, $list-gradation-color, $invisible-color)
+      border-radius: 0 0 0 4px
+
+.jQWCP-wWidget
+  &.jQWCP-block
+    height: 190px * $ratio
+    border: 0
+    box-shadow: none
+    padding: 0
+    position: absolute
+    left: 160px * $ratio
+    top: 67px * $ratio
+    background: $invisible-color
+
+    &:focus
+      outline: 0
+
+    input
+      display: block
+
+.jQWCP-wPreview
+  width: 18px * $ratio
+  height: 18px * $ratio
+  position: absolute
+  left: 26px * $ratio
+  top: 84px * $ratio
+
+.jQWCP-wPreviewBox
+  width: 100%
+  height: 100%
+  border-radius: 0
+
+.jQWCP-wWheel
+  width: 190px * $ratio
+  height: 190px * $ratio
+  position: absolute
+  right: 39px * $ratio
+  top: 0
+
+.jQWCP-wWheelOverlay
+  width: 190px * $ratio
+  height: 190px * $ratio
+  position: absolute
+  left: 0
+  top: 0
+
+.jQWCP-wValSlider
+  &.jQWCP-slider
+    width: 18px * $ratio
+    height: 190px * $ratio
+    position: absolute
+    border-radius: 10px
+
+.jQWCP-wValCursor
+  &.jQWCP-scursor
+    width: 18px * $ratio
+    height: 18px * $ratio
+    margin: -7px 0 0
+    background: url('../image_mobile/block/ledHandle.svg') no-repeat

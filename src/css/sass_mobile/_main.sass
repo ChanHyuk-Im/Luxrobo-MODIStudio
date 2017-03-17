@@ -1,0 +1,263 @@
+@font-face
+  font-family: 'RotFont'
+  src: url('../fonts/NanumGothic.ttf')
+
+html
+  width: 100%
+  height: 100%
+  padding: 0
+  margin: 0
+  touch-action: manipulation
+  font-family: 'RotFont'
+
+body
+  width: 100%
+  height: 100%
+  padding: 0
+  margin: 0
+  word-break: break-all
+  overflow: hidden
+  position: relative
+  list-style-type: none
+
+  > .dd-dragel
+    > .module
+      width: 50px
+      height: 65px
+
+      top: 0
+      left: 0
+
+      &::after
+        content: ''
+        display: block
+        clear: both
+
+      > .image
+        width: 100%
+        height: 50px
+        float: left
+        background-repeat: no-repaet
+
+      .imageOn
+        border-radius: 7px
+        border: 2px solid $luxrobo-color
+        background-position: center
+        box-sizing: border-box
+        min-width: 50px
+
+      .exit
+        width: 22px
+        height: 22px
+        position: absolute
+        right: 0
+        top: 0
+        display: none
+        background-image: url('../image_mobile/block/boxExit.svg')
+
+    .text
+      display: none
+
+    > .number
+      .image
+        background-image: url('../image_mobile/icon60/virtual/number.svg')
+
+    > .random
+      .image
+        background-image: url('../image_mobile/icon60/virtual/random.svg')
+
+    > .mic
+      .image
+        background-image: url('../image_mobile/icon60/virtual/mic.svg')
+
+    > .dial
+      .image
+        background-image: url('../image_mobile/icon60/virtual/dial.svg')
+
+    > .enviromnent
+      .image
+        background-image: url('../image_mobile/icon60/virtual/environment.svg')
+
+    > .gyro
+      .image
+        background-image: url('../image_mobile/icon60/virtual/gyro.svg')
+
+    > .button
+      .image
+        background-image: url('../image_mobile/icon60/virtual/button.svg')
+
+    > .ir
+      .image
+        background-image: url('../image_mobile/icon60/virtual/ir.svg')
+
+    > .ultrasonic
+      .image
+        background-image: url('../image_mobile/icon60/virtual/ultrasonic.svg')
+
+    > .motor
+      .image
+        background-image: url('../image_mobile/icon60/virtual/motor.svg')
+
+    > .led
+      .image
+        background-image: url('../image_mobile/icon60/virtual/led.svg')
+
+    > .speaker
+      .image
+        background-image: url('../image_mobile/icon60/virtual/speaker.svg')
+
+    > .display
+      .image
+        background-image: url('../image_mobile/icon60/virtual/display.svg')
+
+    > .network
+      .image
+        background-image: url('../image_mobile/icon60/virtual/network.svg')
+
+    .imageIf
+      background: url('../image_mobile/palette/paletteIfOn.svg')
+
+    .imageWhile
+      background: url('../image_mobile/palette/paletteWhileOn.svg')
+
+    .imageLoop
+      background: url('../image_mobile/palette/paletteLoopOn.svg')
+
+    .imageBreak
+      background: url('../image_mobile/palette/paletteBreakOn.svg')
+
+    .imageMath
+      background: url('../image_mobile/palette/paletteMathOn.svg')
+
+    .imageDelay
+      background: url('../image_mobile/palette/paletteDelayOn.svg')
+
+    .imageRandom
+      background: url('../image_mobile/palette/paletteRandomOn.svg')
+
+    .imageCustom
+      background: url('../image_mobile/palette/paletteCustomOn.svg')
+
+    .imageComment
+      background: url('../image_mobile/palette/paletteCommentOn.svg')
+
+  > ul
+    .item
+      width: 100%
+      height: 62px
+      margin-bottom: 20px
+      text-align: center
+
+      .image
+        width: 44px
+        height: 44px
+
+
+      .text
+        width: 80px
+        height: 12px
+        margin-top: -3px
+        text-align: center
+        vertical-align: super
+        font-size: 12px
+
+    .dd-item
+      top: 0 !important
+      left: 0 !important
+
+textarea
+  resize: none
+
+ul
+  list-style-type: none
+  margin: 0
+  padding: 0
+
+.main
+  width: 100%
+  height: 100%
+  position: absolute
+  left: 0
+  top: 0
+  overflow: hidden
+
+  > .mobileBackground
+    width: 100%
+    height: 100%
+    position: absolute
+    left: 0
+    top: 0
+    pointer-events: auto
+    background-color: $black-color
+    opacity: .2
+    z-index: 2001
+    display: none
+    transition: display 5s
+
+  > .showMobileBackground
+    display: initial
+    transition: display 3s
+
+.dd-dragel
+  position: absolute
+  pointer-events: none
+  opacity: .7
+  z-index: 9999
+
+$dd-empty-background-color: #f2fbff
+$dd-empty-border-color: #b6bcbf
+
+.dd-empty
+  margin: 5px 0
+  padding: 0
+  min-height: 30px
+  background-color: $dd-empty-background-color
+  border: 1px dashed $dd-empty-border-color
+  box-sizing: border-box
+
+$dd-placeholder-background-color: #808080
+
+.dd-placeholder
+  position: relative
+  margin-left: 0
+  padding-left: 44px
+  border: 0
+
+  &::before
+    position: absolute
+    content: ''
+    width: 0
+    height: 0
+    margin-top: -3px
+    left: -4px
+    top: 18px
+    border: 6px solid transparent
+    border-left-color: $editor-box-border-color
+    border-right: 0
+
+  &::after
+    position: absolute
+    content: ''
+    width: 181px
+    height: 44px
+    background-color: $editor-box-border-color
+    border-radius: 3px
+
+.root
+  > .dd-placeholder
+    padding-left: 0
+
+.dd-collapse
+  display: none
+
+.dd-expand
+  display: none
+
+.editor
+  .dd-list
+    &:not(.root)
+      margin: 0
+      padding-left: 48px
+
+  > .dd-list
+    padding-left: 0

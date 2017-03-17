@@ -1,0 +1,1593 @@
+﻿$logout-background-color: rgb(209, 209, 209)
+$reset-hover-background-color: rgb(230, 230, 230)
+
+input
+  font-family: 'RotFont'
+
+.modal
+  width: 100%
+  height: 100%
+  position: absolute
+  left: 0
+  top: 0
+  z-index: 3000
+  display: none
+
+  > .background
+    width: 100%
+    height: 100%
+    background-color: $black-color
+    opacity: .2
+
+  > .window
+    width: 704px
+    position: absolute
+    background: $white-color
+    display: table
+    box-sizing: border-box
+
+    > .body
+      box-sizing: border-box
+      border:
+        right: 1px solid $modal-border-color
+        bottom: 1px solid $modal-border-color
+        left: 1px solid $modal-border-color
+
+    > .title
+      width: 100%
+      height: 44px * $ratio
+      position: absolute
+      left: 0
+      top: 0
+      color: $white-color
+      background: $color65
+      pointer-events: auto
+      box-sizing: border-box
+
+      > .text
+        width: 100%
+        height: 44px * $ratio
+        text-align: center
+        line-height: 44px * $ratio
+        pointer-events: none
+        position: absolute
+        font-size: 18px * $ratio
+
+      > .goback
+        width: 44px * $ratio
+        height: 44px * $ratio
+        font-size: 0px
+        background-image: url('../image_mobile/back.svg')
+
+        &.clickGoback
+          background-image: url('../image_mobile/backOn.svg')
+
+      > .exit
+        width: 38px * $ratio
+        height: 38px * $ratio
+        position: absolute
+        right: 0
+        top: 0
+        background-image: url('../image/modal/landingExit.svg')
+
+        &:hover
+          background-image: url('../image/modal/landingExitOn.svg')
+
+  span
+    display: inline-block
+    vertical-align: middle
+    line-height: normal
+
+  input
+    &[type='text']
+      padding: 0
+      margin: 0
+      color: $mobile-input-text-color
+      background: $modal-input-background-color
+
+      &:focus
+        outline: 0
+        border: 1px solid $outline-color
+        background-color: $white-color
+
+  textarea
+    border: 1px solid $modal-input-border-color
+    background: $modal-input-background-color
+
+    &:focus
+      outline: 0
+      border: 1px solid $outline-color
+      background-color: $white-color
+
+  .ok
+    width: 147px * $ratio
+    height: 44px * $ratio
+    position: absolute
+    right: 12px * $ratio
+    bottom: 16px * $ratio
+    text-align: center
+    line-height: 44px * $ratio
+    border: 1px solid $luxrobo-color
+    border-radius: 3px
+    box-sizing: border-box
+    background-color: $white-color
+    color: $luxrobo-color
+
+    &.clickOk
+      color: $white-color
+      background-color: $luxrobo-color
+
+  .cancel
+    width: 147px * $ratio
+    height: 44px * $ratio
+    position: absolute
+    left: 12px * $ratio
+    bottom: 16px * $ratio
+    text-align: center
+    line-height: 44px * $ratio
+    border: 1px solid $mobile-button-border-color
+    border-radius: 3px
+    box-sizing: border-box
+    background-color: $white-color
+    color: $mobile-button-text-color
+
+    &.clickCancel
+      color: $white-color
+      border: 1px solid $luxrobo-color
+      background-color: $luxrobo-color
+
+  > .main
+    width: 100%
+    height: 100%
+    background-color: $color250
+    left: 0
+    top: 0
+    display: none
+
+    > div
+      width: 100%
+      height: 44px * $ratio
+      border-bottom: 1px solid $modal-run-scroll-track-color
+      background-color: $white-color
+      box-sizing: border-box
+
+      > .image
+        width: 44px * $ratio
+        height: 44px * $ratio
+        float: left
+        margin-left: 8px * $ratio
+        margin-right: 8px * $ratio
+        box-sizing: border-box
+
+      > .text
+        width: auto
+        height: 44px * $ratio
+        font-size: 18px * $ratio
+        line-height: 44px * $ratio
+        float: left
+        bottom: percentage(34/133)
+
+      > .arrow
+        background: url(../image_mobile/modal/arrow.svg) no-repeat
+        width: 44px * $ratio
+        height: 44px * $ratio
+        float: right
+
+    > .news
+      display: none
+
+    > .menuTitle
+      > .text
+        position: absolute
+        top: 0
+        left: 52px * $ratio
+
+      > .titleExit
+        > .image
+          width: 44px * $ratio
+          height: 44px * $ratio
+          margin-right: 8px * $ratio
+          float: left
+          background: url(../image_mobile/modal/menuExit.svg) no-repeat
+
+        &.clickExit
+          > .image
+            background: url(../image_mobile/modal/menuExitOn.svg) no-repeat
+
+    > .userId
+      height: 54px * $ratio
+      background-color: $luxrobo-color
+      border-bottom: 0
+
+      > .text
+        margin-left: 16px * $ratio
+        height: 54px * $ratio
+        line-height: 54px * $ratio
+        margin-left: 16px * $ratio
+        color: $white-color
+
+      > .logout
+        width: 60px * $ratio
+        height: 28px * $ratio
+        float: right
+        background-color: $white-color
+        margin-top: 13px * $ratio
+        margin-right: 16px * $ratio
+        border-radius: 4px
+        
+        > .text
+          color: $luxrobo-color
+          font-size: 11px * $ratio
+          line-height: 30px * $ratio
+          text-align: center
+
+        &.clickLogout
+          border-radius: 4px
+          background-color: $logout-background-color
+
+          > .text
+            color: $white-color
+
+    > .getting
+      @include mobile-modal-main-image(gettingStart)
+
+    > .new
+      @include mobile-modal-main-image(newProject)
+
+    > .setting
+      @include mobile-modal-main-image(setting)
+
+    > .project1
+      display: none
+
+    > .project2
+      display: none
+
+    > .project3
+      display: none
+
+    > .community
+      @include mobile-modal-main-image(community)
+
+    > .save
+      @include mobile-modal-main-image(save)
+
+    > .reset
+      @include mobile-modal-main-image(reset)
+
+    > .empty
+      width: 100%
+      height: 32px * $ratio
+      background-color: $color250
+
+    .shade
+      width: 100%
+      height: 100%
+      background-color: $black-color
+      opacity: .2
+
+      &:hover
+        opacity: 0
+
+    > .openas
+      @include mobile-modal-main-image(openAs)
+
+    > .exit
+      display: none
+
+  > .gettingproject
+    width: 100%
+    height: 100%
+    left: 0
+    top: 0
+    background: $black-color
+
+    > .title
+      height: 43px * $ratio
+      color: $black-color
+      background: $mobile-modulebox-background-color
+      border-right: 1px solid $mobile-modulebox-background-color
+      box-sizing: initial
+
+      > .exit
+        display: none
+
+    > .video
+      width: 100%
+      position: absolute
+      left: 0
+      top: 30%
+      box-sizing: border-box
+
+      > video
+        width: 100%
+
+  > .newproject
+    width: 100%
+    height: 100%
+    left: 0
+    top: 0
+    box-shadow: 0px 0px 0px 0px rgb(255, 255, 255)
+
+    > .title
+      height: 44px * $ratio
+      color: $black-color
+      background: $mobile-modulebox-background-color
+      border-bottom: 1px solid $mobile-line-color
+
+      > .exit
+        display: none
+
+      > .open
+        width: 44px * $ratio
+        height: 44px * $ratio
+        position: absolute
+        right: 0
+        top: 0
+        background-image: url(../image_mobile/openProject.svg)
+
+        &.clickOpen
+          background-image: url(../image_mobile/openProjectOn.svg)
+
+    > .body
+      width: 100%
+      height: percentage(603/647)
+      position: absolute
+      left: 0
+      top: 44px * $ratio
+      box-sizing: border-box
+      background: $white-color
+      border: 0
+      overflow: hidden
+
+      > .file
+        position: absolute
+        bottom: 0
+        width: 100%
+        height: 100%
+        background: $color250
+
+        > ul
+          @include scrollbar(2px, 10px, 6px, $color250, $modal-openproject-scroll-color, $color250)
+          width: 100%
+          height: 100%
+          overflow-x: hidden
+          overflow-y: auto
+          list-style-type: none
+          padding-left: 0px
+          margin:
+            top: 0px
+            bottom: 0px
+
+          > .item
+            width: 100%
+            height: 66px * $ratio
+
+            > .image
+              width: 50px * $ratio
+              height: 50px * $ratio
+              background: url("../image_mobile/icon60/connect/network.svg") no-repeat
+              box-sizing: border-box
+              float: left
+              margin:
+                top: 16px * $ratio
+                left: 8px * $ratio
+                right: 16px * $ratio
+
+            > .name
+              width: 100%
+              line-height: 82px * $ratio
+              font-size: 18px * $ratio
+
+          > .click
+            .image
+              border-radius: 9px
+              border: 2px solid $luxrobo-color
+              background-position: -2px -2px
+
+            div
+              color: $luxrobo-color
+
+      > .text
+        width: 100%
+        height: 44px * $ratio
+        position: absolute
+        bottom: 68px * $ratio
+        z-index: 2
+        background: $black-color
+        opacity: .5
+        font-size: 14px * $ratio
+        color: $white-color
+        line-height: 44px
+        padding-left: 8px * $ratio
+        transition: bottom .5s
+
+      > .bluetooth
+        width: 100%
+        height: 44px * $ratio
+        line-height: 44px * $ratio
+        position: absolute
+        top: 68px * $ratio
+        box-sizing: border-box
+        border: 1px solid $modal-setting-text-background
+        border-left: 0px
+        border-right: 0px
+
+        > .switchBtn
+          display: inline-block
+          position: absolute
+          top: 7px * $ratio
+          right: 8px * $ratio
+          vertical-align: middle
+          width: 52px * $ratio
+          height: 30px * $ratio
+          box-sizing: border-box
+          border-radius: 100px * $ratio
+          border: 1px solid $outline-color
+          background-color: $color250
+          overflow: hidden
+
+          > .switch
+            width: 30px * $ratio
+            height: 30px * $ratio
+            position: absolute
+            top: -1px * $ratio
+            left: -1px * $ratio
+            right: 41%
+            background-color: #fff
+            box-sizing: border-box
+            border-radius: 36px * $ratio
+            border: 1px solid $outline-color
+            z-index: 1
+            transition: 0.25s cubic-bezier(0.785, 0.135, 0.15, 0.86)
+            transition-property: left, right
+            transition-delay: 0s, .08s
+
+            &.checked
+              right: 2px * $ratio
+              left: 41%
+              transition: 0.25s cubic-bezier(0.785, 0.135, 0.15, 0.86)
+              transition-property: left, right
+              transition-delay: .08s, 0s
+
+
+        > .text
+          width: 300px
+          vertical-align: middle
+          margin-left: 8px * $ratio
+          font-size: 18px * $ratio
+          color: black
+
+      > .inputText
+        position: absolute
+        top: 16px * $ratio
+        left: 8px * $ratio
+        width: 359px * $ratio
+        height: 36px * $ratio
+        font-size: 18px * $ratio
+        padding-left: 8px * $ratio
+        box-sizing: border-box
+        border: 1px solid $modal-input-background-color
+        background: $modal-input-background-color
+
+        &:focus
+          outline: 0
+          border: 1px solid $outline-color
+          background-color: $white-color
+
+      > .image
+        position: absolute
+        background: url('../image_mobile/modal/newProjectImage.svg') no-repeat
+
+      > .buttonBackground
+        width: 100%
+        height: 68px * $ratio
+        position: absolute
+        bottom: 0
+        background: $white-color
+        opacity: .8
+        z-index: 2
+
+      > .button
+        width: 271px * $ratio
+        height: 44px * $ratio
+        position: absolute
+        bottom: 16px * $ratio
+        left: 52px * $ratio
+        z-index: 2
+        margin-top: 8px * $ratio
+        border-radius: 3px * $ratio 
+        border: 1px solid $modal-run-scroll-color
+        background: $white-color
+        color: $modal-run-scroll-color
+        display: flex
+        justify-content: center
+        align-items: center
+        font-size: 18px * $ratio
+
+        &.clickBotton
+          color: $luxrobo-color
+          border: 1px solid $luxrobo-color
+
+      > .existText
+        display: none
+
+  > .openproject
+    width: 100%
+    height: 100%
+    left: 0
+    top: 0
+    box-shadow: 0px 0px 0px 0px rgb(255, 255, 255)
+
+    > .title
+      height: 44px * $ratio
+      color: $black-color
+      background: $mobile-modulebox-background-color
+      border-bottom: 1px solid $mobile-line-color
+
+      > .exit
+        display: none
+
+    > .body
+      width: 100%
+      height: percentage(603/647)
+      position: absolute
+      left: 0
+      top: 44px * $ratio
+      box-sizing: border-box
+      background: $white-color
+      border: 0
+
+      > .file
+        position: absolute
+        top: 68px * $ratio
+        width: 100%
+        height: 100%
+        background: $color250
+
+        > ul
+          @include scrollbar(2px, 10px, 6px, $color250, $modal-openproject-scroll-color, $color250)
+          width: 100%
+          height: 100%
+          overflow-x: hidden
+          overflow-y: auto
+          list-style-type: none
+          padding-left: 8px
+          box-sizing: border-box
+          border-top: 1px solid $modal-run-scroll-track-color
+          margin:
+            top: 0px
+            bottom: 0px
+
+          > .item
+            width: 171px
+            height: 133px
+            float: left
+            margin: 16px 17px 0 0
+
+            > .image
+              width: 100%
+              height: 114px
+              box-sizing: border-box
+              border: 1px solid $mobile-line-color
+              margin-bottom: 8px
+
+            > .name
+              width: 100%
+              height: 11px
+              font-size: 11px
+              box-sizing: border-box
+              text-align: center
+              vertical-align: bottom
+
+      > .inputText
+        width: 359px * $ratio
+        height: 36px * $ratio
+        position: absolute
+
+        > input
+          width: 100%
+          height: 36px * $ratio
+          box-sizing: border-box
+          border: 1px solid $modal-input-background-color
+          background-color: $modal-input-background-color
+          background-image: url('../image_mobile/search.svg')
+          background-repeat: no-repeat
+          left: 8px * $ratio
+          top: 16px * $ratio
+          padding-left: 36px
+          font-size: 18px * $ratio
+
+          &:focus
+            outline: 0
+            border: 1px solid $outline-color
+            background-color: $white-color
+
+
+      > .buttonBackground
+        width: 100%
+        height: 68px * $ratio
+        position: absolute
+        bottom: 0
+        background: $white-color
+        opacity: .8
+
+      > .button
+        width: 271px * $ratio
+        height: 44px * $ratio
+        position: absolute
+        bottom: 16px * $ratio
+        left: 52px * $ratio
+        margin-top: 8px * $ratio
+        border-radius: 3px * $ratio 
+        border: 1px solid $modal-run-scroll-color
+        background: $white-color
+        color: $modal-run-scroll-color
+        display: flex
+        justify-content: center
+        align-items: center
+        font-size: 18px * $ratio
+
+        &.clickBotton
+          background-color: $luxrobo-color
+          color: $white-color
+          border: 1px solid $luxrobo-color
+
+  > .actionwizard
+    width: 327px * $ratio
+    height: 250px * $ratio
+    position: absolute
+    background: $white-color
+    box-sizing: border-box
+    left: 5%
+    bottom: 5%
+
+    > .body
+      width: 327px * $ratio
+      height: 212px * $ratio
+      position: absolute
+      left: 0
+      top: 38px * $ratio
+      border:
+        right: 1px solid $modal-border-color
+        bottom: 1px solid $modal-border-color
+        left: 1px solid $modal-border-color
+
+
+      > .image
+        width: 90px * $ratio
+        height: 90px * $ratio
+        position: absolute
+        top: 16px * $ratio
+        left: 118px * $ratio
+        font-size: 14px
+        text-align: center
+        background: url('../image_mobile/modal/wizardImage.svg') no-repeat
+
+      > .text
+        width: 303px * $ratio
+        height: 14px * $ratio
+        position: absolute
+        left: 12px * $ratio
+        top: 122px * $ratio
+        font-size: 14px
+        text-align: center
+
+      > .always
+        width: 147px * $ratio
+        height: 44px * $ratio
+        position: absolute
+        left: 12px * $ratio
+        bottom: 16px * $ratio
+        border-radius: 4px
+        border: 1px solid $mobile-button-border-color
+        background: url('../image_mobile/modal/ifAlwaysButton.svg')
+
+        &:hover
+          border: 1px solid rgb(98, 183, 0)
+          background: url('../image_mobile/modal/ifAlwaysButtonOn.svg')
+
+      > .condition
+        width: 147px * $ratio
+        height: 44px * $ratio
+        position: absolute
+        right: 12px * $ratio
+        bottom: 16px * $ratio
+        border-radius: 4px
+        border: 1px solid $mobile-button-border-color
+        background: url('../image_mobile/modal/ifConditionButton.svg')
+
+        &:hover
+          border: 1px solid rgb(98, 183, 0)
+          background: url('../image_mobile/modal/ifConditionButtonOn.svg')
+
+  > .run
+    width: 327px * $ratio
+    height: 246px * $ratio
+    position: absolute
+
+    > .body
+      width: 100%
+      height: 208px * $ratio
+      position: absolute
+      left: 0
+      top: 44px * $ratio
+      background: $white-color
+
+      > .ask
+        width: 100%
+        height: 208px * $ratio
+
+        > .background
+          display: none
+
+        > .icon
+          width: 44px * $ratio
+          height: 44px * $ratio
+          position: absolute
+          left: 141px * $ratio
+          top: 16px * $ratio
+          background: url('../image_mobile/modal/notice.svg') no-repeat
+
+        > .textAttention
+          display: none
+
+        > .text
+          display: none
+
+        > .checkbox
+          display: none
+
+        > label
+          display: none
+          width: 580px
+          height: 10px
+          position: absolute
+          left: 30px
+          bottom: 12px
+          font-size: 10px
+          cursor: pointer
+          color: $modal-run-label-color
+
+          > .checkbox
+            border: 1px solid $modal-run-label-color
+            cursor: pointer
+            background: $black-color
+
+          > .text
+            width: 560px
+            height: 10px
+            position: absolute
+            right: 0
+            top: -1px
+            font-size: 11px
+            color: $modal-run-label-color
+
+      > .update
+        display: none
+        width: 100%
+        height: 378px * $ratio
+        box-sizing: border-box
+        background: $white-color
+        border-bottom: 1px solid $modal-border-color
+
+        > .gif
+          width: 160px * $ratio
+          height: 90px * $ratio
+          position: absolute
+          left: 80px * $ratio
+          top: 16px * $ratio
+
+        > .textUpdate
+          width: 303px * $ratio
+          height: 14px * $ratio
+          position: absolute
+          left: 12px * $ratio
+          top: 100px * $ratio
+          font-size: 14px
+          text-align: center
+          font-weight: bold
+
+        > .icon
+          width: 44px * $ratio
+          height: 44px * $ratio
+          position: absolute
+          left: 142px * $ratio
+          top: 16px * $ratio
+          display: none
+
+        > .textWarning
+          width: 303px * $ratio
+          height: 36px * $ratio
+          position: absolute
+          left: 12px * $ratio
+          top: 130px * $ratio
+          font-size: 14px
+          line-height: 14px
+          text-align: center
+          color: $mobile-button-text-color
+          word-break: normal
+
+        > .textDetail
+          @include scrollbar(2px, 10px, 6px, $modal-run-scroll-track-color, $modal-run-scroll-color, $modal-run-scroll-track-color)
+          width: 303px * $ratio
+          height: 100px * $ratio
+          position: absolute
+          left: 12px * $ratio
+          top: 182px * $ratio
+          box-sizing: border-box
+          background: $modal-run-scroll-track-color
+          overflow-y: auto
+          padding:
+            top: 16px * $ratio
+            left: 8px * $ratio
+            right: 8px * $ratio
+          font-size: 11px
+          color: $mobile-modal-detail-color
+          line-height: 11px
+
+        > .buttonDetail
+          width: 147px * $ratio
+          height: 44px * $ratio
+          position: absolute
+          left: 90px * $ratio
+          bottom: 16px * $ratio
+          text-align: center
+          font-size: 17px * $ratio
+          line-height: 44px * $ratio
+          background: $white-color
+          border: 1px solid $mobile-button-border-color
+          color: $mobile-button-text-color
+          border-radius: 3px
+
+          &.clickButtonDetail
+            background: $luxrobo-color
+            border: 1px solid $luxrobo-color
+            color: $white-color
+
+        > .show
+          background:  $white-color
+          border: 1px solid $mobile-button-border-color
+          color: $mobile-button-text-color
+
+        > .textResult
+          width: 303px * $ratio
+          height: 12px * $ratio
+          position: absolute
+          left: 12px * $ratio
+          top: 106px * $ratio
+          text-align: center
+          line-height: 12px * $ratio
+          font-size: 12px * $ratio
+          font-weight: bold
+
+        > .close
+          width: 147px * $ratio
+          height: 44px * $ratio
+          position: absolute
+          left: 90px * $ratio
+          bottom: 16px * $ratio
+          text-align: center
+          font-size: 17px * $ratio
+          line-height: 44px * $ratio
+          background: $white-color
+          border: 1px solid $luxrobo-color
+          color: $luxrobo-color
+          box-sizing: border-box
+          border-radius: 4px
+          display: none
+
+          &.clickClose
+            background: $luxrobo-color
+            border: 1px solid $luxrobo-color
+            color: $white-color
+
+  > .modulesetting
+    width: 640px
+    height: 310px
+    position: absolute
+    left: 50%
+    top: 5%
+    background: $white-color
+
+    > .body
+      width: 640px - 2px
+      height: 270px
+      position: absolute
+      left: 100
+      top: 40px
+      background: $modal-setting-background
+
+      > .tabProperty
+        width: 100px
+        height: 30px
+        position: absolute
+        left: 0
+        top: 0
+        line-height: 30px
+        text-align: center
+        font-size: 14px
+        font-weight: bold
+        background: $white-color
+
+      > .tabMonitoring
+        width: 100px
+        height: 30px
+        position: absolute
+        left: 100px
+        top: 0
+        line-height: 30px
+        text-align: center
+        font-size: 14px
+        background: $modal-setting-background
+
+      > .bodyProperty
+        width: 100%
+        height: 240px
+        position: absolute
+        left: 0
+        top: 30px
+        background: $white-color
+
+        > .content
+          width: 580px
+          height: 140px
+          position: absolute
+          left: 30px
+          top: 20px
+
+          > .module
+            width: 171px
+            height: 100%
+            position: absolute
+            left: 0
+            top: 0
+            box-sizing: border-box
+            border-right: 1px solid $modal-setting-background
+
+            > .image
+              width: 60px
+              height: 60px
+              position: absolute
+              left: 45px
+              top: 0
+              background: $colora
+
+            > .textName
+              width: 50px
+              height: 30px
+              position: absolute
+              left: 0
+              top: 70px
+              font-size: 14px
+              line-height: 30px
+              text-align: center
+
+            > .Name
+              width: 100px
+              height: 30px
+              position: absolute
+              left: 50px
+              top: 70px
+              background: $modal-setting-text-background
+
+            > .textId
+              width: 50px
+              height: 30px
+              position: absolute
+              left: 0
+              top: 110px
+              font-size: 14px
+              line-height: 30px
+              text-align: center
+
+            > .id
+              width: 100px
+              height: 30px
+              position: absolute
+              left: 50px
+              top: 110px
+              background: $modal-setting-text-background
+
+          > .textInterchange
+            width: 280px
+            height: 30px
+            position: absolute
+            right: 110px
+            top: 0
+            line-height: 30px
+            text-align: right
+            font-size: 12px
+            color: $modal-setting-background
+            background: $white-color
+
+          > .select
+            width: 100px
+            height: 30px
+            position: absolute
+            right: 0
+            top: 0
+
+          > .property
+            width: 390px
+            height: 100px
+            position: absolute
+            right: 0
+            top: 40px
+
+        > .cancel
+          width: 120px
+          height: 30px
+          position: absolute
+          left: 355px
+          bottom: 30px
+
+        > .ok
+          width: 120px
+          height: 30px
+          position: absolute
+          left: 490px
+          bottom: 30px
+
+      > .bodyMonitoring
+        width: 100%
+        height: 542px
+        position: absolute
+        left: 0
+        top: 30px
+        background: $white-color
+        display: none
+
+        > div
+          width: 622px
+          height: 524px
+          position: absolute
+          left: 10px
+          top: 10px
+          box-sizing: border-box
+          border: 1px solid $modal-body-border
+          background: $modal-body-background-color
+
+          > .tabStatus
+            width: 89px
+            height: 21px
+            position: absolute
+            left: 0
+            top: 0
+            box-sizing: border-box
+            font-size: 12px
+            line-height: 20px
+            text-align: center
+            border-right: 1px solid $modal-body-border
+            background: $modal-body-background-color
+
+          > .tabSystem
+            width: 91px
+            height: 21px
+            position: absolute
+            left: 90px
+            top: 0
+            box-sizing: border-box
+            line-height: 20px
+            font-size: 12px
+            text-align: center
+            border:
+              right: 1px solid $modal-body-border
+              bottom: 1px solid $modal-setting-text-background
+            background: $modal-setting-text-background
+
+          > .bodyStatus
+            width: 100%
+            height: 501px
+            position: absolute
+            left: 0
+            top: 20px
+            border-top: 1px solid $modal-body-border
+            background: $modal-setting-text-background
+
+            > .slider
+              width: 8px
+              height: 280px
+              position: absolute
+              left: 56px
+              top: 202px
+              background: $modal-body-border
+
+              .ui-slider-handle
+                width: 20px
+                height: 10px
+                left: -6px
+
+              .ui-state-active
+                background: $modal-slider-active-color
+
+            > .textModulestatus
+              width: 80px
+              height: 60px
+              position: absolute
+              left: 20px
+              top: 112px
+              font-size: 14px
+              text-align: center
+
+            > .graph
+              width: 480px
+              height: 400px
+              position: absolute
+              left: 120px
+              top: 82px
+              background: $white-color
+
+          .summary
+            width: 360px
+            height: 42px
+            position: absolute
+            right: 20px
+            top: 20px
+
+            > div
+              width: 120px
+              height: 42px
+              position: absolute
+              top: 0
+              text-align: center
+              background: $modal-setting-text-background
+
+            .text
+              width: 100%
+              height: 12px
+              position: absolute
+              left: 0
+              top: 0
+              font-size: 12px
+
+            .percent
+              width: 100%
+              height: 30px
+              position: absolute
+              left: 0
+              bottom: 0
+              text-align: center
+              font-size: 20px
+
+            > .cpu
+              left: 0
+
+            > .memoryflash
+              left: 120px
+
+            > .network
+              left: 240px
+
+          > .bodySystem
+            width: 620px
+            height: 502px
+            position: absolute
+            left: 0
+            top: 20px
+            box-sizing: border-box
+            border-top: 1px solid $modal-body-border
+            background: $modal-setting-text-background
+
+            > div
+              width: 580px
+              height: 120px
+              position: absolute
+              right: 20px
+              background: $modal-setting-text-background
+
+              > .graph
+                width: 480px
+                height: 120px
+                position: absolute
+                left: 100px
+                top: 0
+                background: $white-color
+
+              > .text
+                width: 100px
+                height: 120px
+                position: absolute
+                left: 0
+                top: 0
+                line-height: 120px
+                font-size: 14px
+                background: $modal-setting-text-background
+
+            > .summary
+              width: 360px
+              height: 42px
+              top: 20px
+
+            > .cpu
+              top: 82px
+
+            > .memoryflash
+              top: 222px
+
+            > .network
+              top: 362px
+
+  > .beforeOpenproject
+    width: 327px * $ratio
+    height: 241px * $ratio
+    position: absolute
+    left: 25%
+    top: 30%
+    background: $white-color
+
+    > .title
+      > .text
+        display: none
+
+      > .textMobile
+        width: percentage(337/375)
+        height: 38px * $ratio
+        text-align: center
+        line-height: 38px * $ratio
+        pointer-events: none
+
+    > .body
+      width: 100%
+      height: 203px * $ratio
+      position: absolute
+      box-sizing: border-box
+      left: 0
+      top: 38px * $ratio
+
+      > .icon
+        width: 44px * $ratio
+        height: 44px * $ratio
+        position: absolute
+        left: 141px * $ratio
+        top: 16px * $ratio
+        background: url('../image_mobile/modal/warning.svg') no-repeat
+
+      > .text
+        display: none
+
+      > .textMobile
+        width: 303px * $ratio
+        height: 54px * $ratio
+        position: absolute
+        line-height: 14px * $ratio
+        left: 12px * $ratio
+        top: 76px * $ratio
+        font-size: 14px
+        text-align: center
+        word-break: normal
+
+      > .save
+        display: none
+        width: 147px * $ratio
+        height: 44px * $ratio
+        position: absolute
+        right: 12px * $ratio
+        bottom: 16px * $ratio
+        background-color: $white-color
+        border: 1px solid $luxrobo-color
+        border-radius: 4px
+
+        &:hover
+          background-color: $luxrobo-color
+
+      > .notsave
+        display: none
+
+      > .cancel
+        width: 147px * $ratio
+        height: 44px * $ratio
+        position: absolute
+        left: 12px * $ratio
+        bottom: 16px * $ratio
+        background-color: $white-color
+        border: 1px solid $mobile-button-border-color
+        border-radius: 4px
+
+        &:hover
+          border: 1px solid $luxrobo-color
+          background-color: $luxrobo-color
+
+    > .background
+      display: none
+
+  > .saveproject
+    width: 640px
+    height: 290px
+    position: absolute
+    left: 25%
+    top: 30%
+    background: $white-color
+
+    > .body
+      width: 640px - 2px
+      height: 250px
+      position: absolute
+      left: 0
+      top: 40px
+
+      > input
+        width: 445px
+        height: 30px
+        position: absolute
+        left: 30px
+        top: 20px
+        border: 0
+        background: $modal-input-background-color
+
+        &:focus
+          outline: 0
+          border: 1px solid $outline-color
+          background-color: $white-color
+
+      > .save
+        width: 120px
+        height: 30px
+        position: absolute
+        left: 490px
+        top: 20px
+        background-image: url('../image/modal/modalSave.svg')
+
+        &:hover
+          background-image: url('../image/modal/modalSaveOn.svg')
+
+      > .picture
+        width: 200px
+        height: 150px
+        position: absolute
+        left: 30px
+        bottom: 30px
+        background: $modal-input-background-color
+
+      > .preview
+        width: 380px
+        height: 150px
+        position: absolute
+        left: 230px
+        bottom: 30px
+        font-size: 12px
+        background: $colora
+
+  > .checkupdate
+    width: 640px
+    height: 252px
+    position: absolute
+    left: 25%
+    top: 30%
+    background: $white-color
+
+    > .body
+      width: 640px - 2px
+      height: 212px
+      position: absolute
+      left: 0
+      top: 40px
+      background: $white-color
+
+      > .checking
+        width: 580px
+        height: 170px
+        position: absolute
+        left: 30px
+        top: 12px
+
+        > .gif
+          width: 300px
+          height: 150px
+          position: absolute
+          left: 140px
+          top: 0
+          background: $colora
+
+        > .text
+          width: 300px
+          height: 20px
+          position: absolute
+          left: 140px
+          top: 145px
+          text-align: center
+          font-size: 20px
+
+      > .checked
+        width: 100%
+        height: 100%
+        position: absolute
+        left: 0
+        top: 0
+
+        > .background
+          width: 158px
+          height: 178px
+          position: absolute
+          right: 0
+          top: 0
+          background-image: url('../image/modal/checkBackground.svg')
+
+        > .condition
+          width: 580px
+          height: 20px
+          position: absolute
+          left: 30px
+          top: 20px
+          font-size: 20px
+
+        > .icon
+          width: 50px
+          height: 50px
+          position: absolute
+          left: 30px
+          top: 70px
+          background-image: url('../image/modal/caution.svg')
+
+        > table
+          width: 500px
+          height: 62px
+          position: absolute
+          left: 110px
+          top: 70px-2px
+          font-size: 12px
+
+        > .update
+          width: 120px
+          height: 30px
+          position: absolute
+          left: 490px
+          bottom: 30px
+          background-image: url('../image/modal/modalNotUpdate.svg')
+
+          &:hover
+            background-image: url('../image/modal/modalNotUpdateOn.svg')
+
+        > meter
+          @include modal-checkupdate-meter($color128, $modal-meter-color)
+          width: 580px
+          height: 30px
+          position: absolute
+          left: 30PX
+          bottom: 30px
+          outline: 1px solid $modal-body-border
+
+  > .moduledetect
+    width: 327px * $ratio
+    height: 274px * $ratio
+    position: absolute
+    left: 5%
+    top: 5%
+
+    > .body
+      width: 100%
+      height: 236px * $ratio
+      position: absolute
+      box-sizing: border-box
+      left: 0
+      top: 38px * $ratio
+
+      > .icon
+        display: none
+
+      > .text
+        width: 303px * $ratio
+        height: 48px * $ratio
+        position: absolute
+        left: 12px * $ratio
+        top: 112px * $ratio
+        font-size: 14px
+
+        > span
+          line-height: 14px * $ratio
+          text-align: center
+          word-break: normal
+
+      > .module
+        width: 235px * $ratio
+        height: 80px * $ratio
+        position: absolute
+        left: 46px * $ratio
+        top: 16px * $ratio
+        font-weight: bold
+        color: $modal-detect-color
+
+        .text
+          width: 80px * $ratio
+          height: 12px * $ratio
+          position: absolute
+          left: 0
+          bottom: 3px * $ratio
+          text-align: center
+          font-size: 12px
+
+        .image
+          width: 60px * $ratio
+          height: 60px * $ratio
+          position: absolute
+          left: 10px * $ratio
+          top: 0
+
+        > .origin
+          width: 80px * $ratio
+          height: 80px * $ratio
+          position: absolute
+          left: 0
+          top: 0
+
+          > .image
+            background: $colorc
+            // background-image: url('../image/icon60/motor.svg')
+
+        > .exchange
+          width: 63px * $ratio
+          height: 40px * $ratio
+          position: absolute
+          left: 86px * $ratio
+          top: 16px * $ratio
+          background: $colorc
+          background-image: url('../image_mobile/modal/change.svg')
+
+        > .new
+          width: 80px * $ratio
+          height: 80px * $ratio
+          position: absolute
+          right: 0
+          top: 0
+
+          > .image
+            border: 1px solid $modal-moduledetect-border-color
+            border-radius: 15px
+            background: $colorc
+            // background-image: url('../image/icon60/motor.svg')
+
+      > .cancel
+        width: 147px * $ratio
+        height: 44px * $ratio
+        position: absolute
+        left: 12px * $ratio
+        bottom: 16px * $ratio
+
+      > .ok
+        width: 147px * $ratio
+        height: 44px * $ratio
+        position: absolute
+        right: 12px * $ratio
+        bottom: 16px * $ratio
+
+  > .modulereset
+    width: 327px * $ratio
+    height: 246px * $ratio
+    position: absolute
+
+    > .body
+      width: 100%
+      height: 202px * $ratio
+      position: absolute
+      left: 0
+      top: 44px * $ratio
+      background: $white-color
+
+      > .ask
+        width: 100%
+        height: 208px * $ratio
+
+        > .background
+          display: none
+
+        > .icon
+          width: 44px * $ratio
+          height: 44px * $ratio
+          position: absolute
+          left: 141px * $ratio
+          top: 16px * $ratio
+          background: url('../image_mobile/modal/warning.svg') no-repeat
+
+        > .textAttention
+          display: none
+
+        > .text
+          width: 303px * $ratio
+          height: 56px * $ratio
+          position: absolute
+          left: 12px * $ratio
+          top: 76px * $ratio
+          font-size: 14px
+          line-height: 12px * $ratio
+          text-align: center
+          word-break: normal

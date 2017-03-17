@@ -1,0 +1,22 @@
+$community-background-color: rgb(255, 0, 255)
+
+.main
+  > .community
+    width: 100%
+    height: 90%
+    position: absolute
+    right: 100%
+    top: 0
+    z-index: 3000
+    background-color: $community-background-color
+    transition-duration: .5s
+    transition-timing-function: ease-in-out
+
+  > .show
+    right: 0
+    transition-duration: .5s
+    transition-timing-function: ease-in-out
+
+  > .openModulebox
+    right: 0
+

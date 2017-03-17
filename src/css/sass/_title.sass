@@ -1,0 +1,285 @@
+$title-name-height: 24px
+$title-border-color: rgb(188, 188, 188)
+$title-background-color: rgb(250, 250, 250)
+$bordertitle-color: rgb(209, 209, 209)
+$guicui-text-color: rgb(0, 0, 0)
+
+.main
+  > .title
+    width: 100%
+    height: 56px
+    position: absolute
+    left: 0
+    top: 0
+    box-sizing: border-box
+    background: $title-background-color
+
+    .titleLogo
+      width: 100px
+      height: 18px
+      position: absolute
+      left: 10px
+      top: 5px
+
+      &:hover
+        > .image
+          background: url('../image/etc/logoOn.svg') no-repeat
+
+        > .text
+          color: $luxrobo-color
+
+      > .image
+        width: 18px
+        height: 18px
+        position: absolute
+        left: 0
+        top: 0
+        background: url('../image/etc/logo.svg') no-repeat
+
+      > .text
+        width: 75px
+        height: 18px
+        position: absolute
+        left: 28px
+        top: 0
+        font-size: 12px
+        cursor: default
+        line-height: 18px
+        color: $color65
+
+    .titleName
+      @include app-region-drag
+      height: $title-name-height
+      line-height: $title-name-height + 4
+      position: absolute
+      left: 110px
+      top: 0
+      text-align: center
+      color: $outline-color
+      font-size: 12px
+
+    > .size
+      width: 78px
+      height: $title-name-height
+      position: absolute
+      right: 0
+      top: 0
+      text-align: center
+      z-index: 4001
+
+      .mini
+        width: 26px
+        height: 100%
+        position: absolute
+        left: 0
+        top: 0
+        background: url('../image/etc/minimum.svg') no-repeat
+
+        &:hover
+          background: url('../image/etc/minimumOn.svg')
+
+      .maxi
+        width: 26px
+        height: 100%
+        position: absolute
+        left: 26px
+        top: 0
+        background: url('../image/etc/maximum.svg') no-repeat
+
+        &:hover
+          background: url('../image/etc/maximumOn.svg')
+
+      .quit
+        width: 26px
+        height: 100%
+        position: absolute
+        right: 0
+        top: 0
+        background: url('../image/etc/exit.svg') no-repeat
+
+        &:hover
+          background: url('../image/etc/exitOn.svg')
+
+    .editorSetting
+      width: 120px
+      height: $editor-setting-height
+      position: absolute
+      left: 10px
+      top: 24px
+      z-index: 2
+
+      > div
+        width: $editor-setting-height
+        height: 100%
+        float: left
+
+      > .project
+        background: url('../image/etc/project.svg') no-repeat
+
+        &:hover
+          background: url('../image/etc/projectOn.svg') no-repeat
+
+      > .setting
+        background: url('../image/etc/setting.svg') no-repeat
+
+        &:hover
+          background: url('../image/etc/settingOn.svg') no-repeat
+
+      > .help
+        background: url('../image/etc/q&a.svg') no-repeat
+
+        &:hover
+          background: url('../image/etc/q&aOn.svg') no-repeat
+
+      > .commuBtn
+        background: url('../image/etc/community.svg') no-repeat
+
+        &:hover
+          background: url('../image/etc/communityOn.svg') no-repeat
+
+    .borderTitle
+      width: 1px
+      height: 16px
+      background: $bordertitle-color
+
+      &.border1
+        position: absolute
+        top: 31px
+        left: 140px
+
+      &.border2
+        float: left
+        margin-top: 8px
+        margin-left: 15px
+        margin-right: 15px
+
+    .guicui,
+    .reset,
+    .playpause,
+    .upload
+      height: 30px
+      float: left
+      margin-right: 15px
+
+      .image
+        width: 30px
+        height: 30px
+        float: left
+
+      .text
+        cursor: default
+        float: left
+        color: $color65
+
+    .collection1
+      position: absolute
+      left: 156px
+      top: 24px
+
+      .guicui
+        > .cui
+          display: none
+
+          > .image
+            background: url('../image/etc/cui.svg') no-repeat
+
+        > .gui
+          > .image
+            background: url('../image/etc/gui.svg') no-repeat
+
+        &:hover
+          .imageCui
+            background: url('../image/etc/cuiOn.svg') no-repeat
+
+          .imageGui
+            background: url('../image/etc/guiOn.svg') no-repeat
+
+          .text
+            color: $luxrobo-color
+
+        .text
+          height: 100%
+          font-size: 12px
+          line-height: 30px
+
+      .reset
+        &:hover
+          .imageReset
+            background: url('../image/etc/resetOn.svg') no-repeat
+
+          > .text
+            color: $luxrobo-color
+
+        > .image
+          background: url('../image/etc/reset.svg') no-repeat
+
+        > .text
+          height: 100%
+          font-size: 12px
+          line-height: 30px
+
+      .upload
+        &:hover
+          .imageUpload
+            background: url('../image/etc/uploadOn.svg') no-repeat
+
+          > .text
+            color: $luxrobo-color
+
+        > .image
+          background: url('../image/etc/upload.svg') no-repeat
+
+        > .text
+          height: 100%
+          font-size: 12px
+          line-height: 30px
+          color: $color65
+
+    .collection2
+      position: absolute
+      right: 10px
+      top: 24px
+
+      .battery
+        height: 30px
+        line-height: 30px
+        float: left
+        color: $battery-text-color
+        font-size: 12px
+        cursor: default
+
+        .text
+          float: left
+
+        .remains
+          height: 30px
+          float: left
+
+      .playpause
+        margin-right: 0
+
+        > .play
+          > .image
+            background: url('../image/etc/play.svg') no-repeat
+
+        > .pause
+          display: none
+
+          > .image
+            background: url('../image/etc/pause.svg') no-repeat
+
+        &:hover
+          .imagePlay
+            background: url('../image/etc/playOn.svg') no-repeat
+
+          .imagePause
+            background: url('../image/etc/pauseOn.svg') no-repeat
+
+          .text
+            color: $luxrobo-color
+
+        .text
+          height: 100%
+          font-size: 12px
+          line-height: 30px
+ 

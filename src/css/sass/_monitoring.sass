@@ -1,0 +1,515 @@
+.monitoring
+  width: 640px
+  height: 285px
+  position: absolute
+  left: 100px
+  top: 100px
+  z-index: 3000
+
+  > .title
+    width: 100%
+    height: 40px
+    position: absolute
+    left: 0
+    top: 0
+    color: $white-color
+    background: $color65
+    pointer-events: auto
+
+    > .text
+      width: 600px
+      height: 100%
+      position: absolute
+      left: 0
+      top: 0
+      display: table-cell
+      vertical-align: middle
+      text-align: center
+      line-height: 40px
+      pointer-events: none
+
+    > .exit
+      width: 40px
+      height: 40px
+      position: absolute
+      right: 0
+      top: 0
+      background-image: url('../image/modal/modalExit.svg')
+
+      &:hover
+        background-image: url('../image/modal/modalExitOn.svg')
+
+  > .body
+    width: 100%
+    height: 285px
+    position: absolute
+    left: 0
+    top: 40px
+    background: $white-color
+    border:
+      right: 1px solid $modal-border-color
+      bottom: 1px solid $modal-border-color
+      left: 1px solid $modal-border-color
+    box-sizing: border-box
+
+    > .icon
+      width: 60px
+      height: 60px
+      position: absolute
+      left: 60px
+      top: 85px
+      box-sizing: border-box
+
+      &.mic
+        background-image: url('../image/icon60/virtual/mic.svg')
+
+      &.dial
+        background-image: url('../image/icon60/virtual/dial.svg')
+
+      &.environment
+        background-image: url('../image/icon60/virtual/environment.svg')
+
+      &.gyro
+        background-image: url('../image/icon60/virtual/gyro.svg')
+
+      &.button
+        background-image: url('../image/icon60/virtual/button.svg')
+
+      &.ir
+        background-image: url('../image/icon60/virtual/ir.svg')
+
+      &.ultrasonic
+        background-image: url('../image/icon60/virtual/ultrasonic.svg')
+
+      &.motor
+        background-image: url('../image/icon60/virtual/motor.svg')
+
+      &.led
+        background-image: url('../image/icon60/virtual/led.svg')
+
+      &.speaker
+        background-image: url('../image/icon60/virtual/speaker.svg')
+
+      &.network
+        background-image: url('../image/icon60/virtual/network.svg')
+
+      &.usb
+        background-image: url('../image/icon60/virtual/usb.svg')
+
+    > .state
+      width: 20px
+      height: 20px
+      position: absolute
+      left: 55px
+      top: 80px
+      border: 1px solid $colorb
+      box-sizing: border-box
+
+    > .name
+      width: 120px
+      height: 30px
+      position: absolute
+      left: 30px
+      top: 170px
+      line-height: 30px
+      text-align: center
+      font-size: 12px
+      box-sizing: border-box
+      border: 1px solid $modal-text-border-color
+
+      &:focus
+        outline: 0
+        border: 1px solid $luxrobo-color
+
+    > .select
+      width: 150px
+      height: 30px
+      box-sizing: border-box
+      border: 1px solid $modal-text-border-color
+      position: absolute
+      top: 40px
+      left: 180px
+      font-size: 12px
+
+      > .selected
+        width: 150px
+        height: 30px
+        position: absolute
+        box-sizing: border-box
+        padding-left: 10px
+        line-height: 30px
+        cursor: default
+
+        &:hover
+          + .arrow
+            background: url('../image/dropListArrowOn.svg') no-repeat
+
+      > .arrow
+        width: 20px
+        height: 30px
+        position: absolute
+        top: -1px
+        right: 0
+        background: url('../image/dropListArrow.svg') no-repeat
+
+        &:hover
+          background: url('../image/dropListArrowOn.svg') no-repeat
+
+      > .list
+        width: 150px
+        box-sizing: border-box
+        position: absolute
+        top: 28px
+        left: -1px
+        z-index: 100
+        background-color: $white-color
+        overflow: hidden
+
+        > .item
+          line-height: 30px
+          padding-left: 10px
+          cursor: default
+
+          &:hover
+            background-color: $luxrobo-color
+
+    > .toggle
+      width: 120px
+      height: 20px
+      top: 20px
+      right: 30px
+      position: absolute
+      border:
+        style: solid
+        width: 1px
+        color: $luxrobo-color
+        radius: 3px
+
+
+      > .graph
+        width: 60px
+        height: 20px
+        position: absolute
+        color: $white-color
+        text-align: center
+        font-size: 12px
+        line-height: 20px
+        cursor: default
+        background-color: $luxrobo-color
+        border:
+          width: 0
+          radius: 2px 0 0 2px
+
+
+      >.table
+        width: 60px
+        height: 20px
+        left: 60px
+        position: absolute
+        color: $luxrobo-color
+        text-align: center
+        font-size: 12px
+        line-height: 20px
+        cursor: default
+        background-color: $white-color
+        border:
+          width: 0
+          radius: 0 2px 2px 0
+
+
+    > .checkbox
+      @include modal-upload-checkbox
+      width: 10px
+      height: 10px
+      position: absolute
+      top: 60px
+      right: 110px
+
+      .checkboxText
+        width: 75px
+        height: 10px
+        position: absolute
+        left: 15px
+        top: 0
+        font-size: 10px
+
+      .checkboxInput
+        width: 10px
+        height: 10px
+        position: absolute
+        left: 0
+        top: 0
+        margin: 0
+
+      .checkboxLabel
+        width: 10px
+        height: 10px
+        position: absolute
+        left: 0
+        top: 0
+        cursor: pointer
+        background: $white-color
+
+        &::after
+          width: 10px
+          height: 10px
+          position: absolute
+          top: 0
+          left: 0
+          opacity: 0
+          content: ''
+          filter: alpha(opacity=0)
+          background: $luxrobo-color
+
+      input
+        &[type='checkbox']
+          visibility: hidden
+
+          &:checked
+            + .checkboxLabel
+              &::after
+                filter: alpha(opacity=100)
+                opacity: 1
+
+    > .graph
+      position: absolute
+      top: 80px
+      right: 25px
+
+    > .table
+      width: 430px
+      height: 125px
+      top: 80px
+      right: 25px
+      position: absolute
+      overflow-y: auto
+      text-align: left
+      font-size: 12px
+      border: 1px solid $modal-input-border-color
+      overflow: hidden
+      box-sizing: border-box
+
+      td
+        padding-left: 10px
+
+      > .title
+        width: 430px
+        height: 20px
+        background-color: $modal-setting-text-background
+
+        tr
+          width: 430px
+          height: 20px
+
+        .time
+          width: 80px
+          height: 20px
+          overflow-x: hidden
+
+        .data
+          width: 350px
+          height: 20px
+
+      > .contentWrapper
+        @include scrollbar(6px, 10px, 6px, $white-color, $scrollbar-color, $white-color)
+        width: 430px
+        height: 100px
+        overflow-x: hidden
+        overflow-y: auto
+
+
+        > .content
+          width: 430px
+          height: 105px
+          border-collapse: collapse
+
+          tr
+            width: 430px
+            height: 20px
+            box-sizing: border-box
+
+            td
+              border:
+                width: 1px
+                color: $modal-text-border-color
+                style: solid
+
+
+            .time
+              width: 80px
+              height: 20px
+
+            .data
+              width: 350px
+              height: 20px
+
+
+    > .export
+      width: 120px
+      height: 30px
+      position: absolute
+      right: 165px
+      bottom: 30px
+      line-height: 30px
+      text-align: center
+      color: $editor-box-font-color
+      background: $white-color
+      border-radius: 4px
+      border: 1px solid $editor-box-font-color
+      cursor: default
+      box-sizing: border-box
+
+      &:hover
+        color: $white-color
+        background: $luxrobo-color
+
+    > .close
+      width: 120px
+      height: 30px
+      position: absolute
+      right: 30px
+      bottom: 30px
+      line-height: 30px
+      text-align: center
+      color: $luxrobo-color
+      background: $white-color
+      border-radius: 4px
+      border: 1px solid $luxrobo-color
+      box-sizing: border-box
+      cursor: default
+
+      &:hover
+        color: $white-color
+        background: $luxrobo-color
+
+  > .openContent
+    height: 290px
+
+.modulesetting
+  width: 405px
+  height: 150px
+  position: absolute
+  left: 100px
+  top: 100px
+  z-index: 3000
+
+  > .title
+    width: 100%
+    height: 40px
+    position: absolute
+    left: 0
+    top: 0
+    color: $white-color
+    background: $color65
+    pointer-events: auto
+
+    > .text
+      width: 100%
+      height: 100%
+      position: absolute
+      left: 0
+      top: 0
+      display: table-cell
+      vertical-align: middle
+      text-align: center
+      line-height: 40px
+      pointer-events: none
+
+  > .body
+    width: 100%
+    height: 110px
+    position: absolute
+    left: 0
+    top: 40px
+    background: $white-color
+    border:
+      right: 1px solid $modal-border-color
+      bottom: 1px solid $modal-border-color
+      left: 1px solid $modal-border-color
+    box-sizing: border-box
+
+    > .icon
+      width: 60px
+      height: 60px
+      position: absolute
+      left: 30px
+      top: 20px
+      box-sizing: border-box
+
+      &.number
+        background-image: url('../image/icon60/virtual/number.svg')
+
+      &.random
+        background-image: url('../image/icon60/virtual/random.svg')
+
+      &.mic
+        background-image: url('../image/icon60/virtual/mic.svg')
+
+      &.dial
+        background-image: url('../image/icon60/virtual/dial.svg')
+
+      &.environment
+        background-image: url('../image/icon60/virtual/environment.svg')
+
+      &.gyro
+        background-image: url('../image/icon60/virtual/gyro.svg')
+
+      &.button
+        background-image: url('../image/icon60/virtual/button.svg')
+
+      &.ir
+        background-image: url('../image/icon60/virtual/ir.svg')
+
+      &.ultrasonic
+        background-image: url('../image/icon60/virtual/ultrasonic.svg')
+
+      &.motor
+        background-image: url('../image/icon60/virtual/motor.svg')
+
+      &.led
+        background-image: url('../image/icon60/virtual/led.svg')
+
+      &.speaker
+        background-image: url('../image/icon60/virtual/speaker.svg')
+
+      &.network
+        background-image: url('../image/icon60/virtual/network.svg')
+
+      &.usb
+        background-image: url('../image/icon60/virtual/usb.svg')
+
+    > .name
+      width: 120px
+      height: 30px
+      position: absolute
+      left: 120px
+      top: 35px
+      line-height: 30px
+      text-align: center
+      font-size: 12px
+      box-sizing: border-box
+      border: 1px solid $modal-text-border-color
+
+      &:focus
+        outline: 0
+        border: 1px solid $luxrobo-color
+
+    > .close
+      width: 120px
+      height: 30px
+      position: absolute
+      right: 30px
+      top: 35px
+      line-height: 30px
+      text-align: center
+      color: $luxrobo-color
+      background: $white-color
+      border-radius: 4px
+      border: 1px solid $luxrobo-color
+      box-sizing: border-box
+      cursor: default
+
+      &:hover
+        color: $white-color
+        background: $luxrobo-color
+

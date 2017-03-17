@@ -1,0 +1,52 @@
+.mapSetting
+  width: 150px * $ratio
+  height: 22px * $ratio
+  position: absolute
+  right: -278px * $ratio
+  top: 11px * $ratio
+  transition: right .3s
+  z-index: 2001
+  pointer-events: none
+
+  > .lineoff
+    width: 46px * $ratio
+    height: 100%
+    position: absolute
+    left: 0
+    top: 0
+    background: url('../image_mobile/modulebox/lineoff.svg') no-repeat
+    pointer-events: initial
+
+    &:hover
+      background: url('../image_mobile/modulebox/lineoffOn.svg') no-repeat
+
+  > .networkoff
+    width: 46px * $ratio
+    height: 100%
+    position: absolute
+    left: 46px * $ratio
+    top: 0
+    background: url('../image_mobile/modulebox/network.svg') no-repeat
+    pointer-events: initial
+
+    &:hover
+      background: url('../image_mobile/modulebox/networkOn.svg') no-repeat
+
+  > .reload
+    width: 46px * $ratio
+    height: 100%
+    position: absolute
+    left: 92px * $ratio
+    top: 0
+    background: url('../image_mobile/modulebox/background.svg') no-repeat
+    pointer-events: initial
+
+    &:hover
+      background: url('../image_mobile/modulebox/backgroundOn.svg') no-repeat
+
+  > .mapMenu
+    display: none
+
+.lookMapSetting
+  right: 0
+  transition: right .5s

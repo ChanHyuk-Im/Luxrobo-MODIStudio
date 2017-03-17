@@ -1,0 +1,30 @@
+$menu-background-color: rgb(88, 88, 88)
+$menu-text-color: rgb(255, 255, 255)
+
+.main
+  > .menu
+    width: 80px
+    position: absolute
+    bottom: 2px
+    left: 0
+    z-index: 1000
+    border-radius: 0 4px 4px 0
+    background: $menu-background-color
+
+    > .palette
+      width: 80px
+      position: absolute
+      top: 20px
+      left: 0
+      overflow:
+        x: hidden
+        y: hidden
+
+
+      &:hover
+        @include scrollbar(2px, 10px, 6px, rgba(0, 0, 0, 0), rgb(140, 140, 140), rgb(88, 88, 88))
+        overflow:
+          x: hidden
+          y: auto
+        white-space: nowrap
+

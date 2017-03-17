@@ -1,0 +1,52 @@
+.mapSetting
+  width: 120px
+  height: 28px
+  position: absolute
+  right: 10px
+  bottom: 0
+
+  > .lineoff
+    width: $editor-setting-height
+    height: 100%
+    position: absolute
+    left: 0
+    top: 0
+    background: url('../image/etc/lineHide.svg') no-repeat
+
+    &:hover
+      background: url('../image/etc/lineHideOn.svg') no-repeat
+
+  > .networkoff
+    width: $editor-setting-height
+    height: 100%
+    position: absolute
+    left: $editor-setting-height
+    top: 0
+    background: url('../image/etc/networkHide.svg') no-repeat
+
+    &:hover
+      background: url('../image/etc/networkHideOn.svg') no-repeat
+
+  > .reload
+    width: $editor-setting-height
+    height: 100%
+    position: absolute
+    left: $editor-setting-height + $editor-setting-height
+    top: 0
+    background: url('../image/etc/background.svg') no-repeat
+
+    &:hover
+      background: url('../image/etc/backgroundOn.svg') no-repeat
+
+  > .mapMenu
+    width: $editor-setting-height
+    height: 100%
+    position: absolute
+    left: $editor-setting-height + $editor-setting-height + $editor-setting-height
+    top: 0
+    background: url('../image/etc/menuDot.svg') no-repeat
+
+    &:hover
+      background: url('../image/etc/menuDotOn.svg') no-repeat
+
+

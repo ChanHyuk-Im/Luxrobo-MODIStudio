@@ -1,0 +1,151 @@
+﻿$font-color: rgb(128, 128, 128)
+$white-color: rgb(255, 255, 255)
+$tab-background-color: rgb(209, 209, 209)
+$tab-on-color: rgb(255, 255, 255)
+$tab-off-color: rgb(209, 209, 209)
+$tab-separator-color: rgb(188, 188, 188)
+$resizer-color: rgb(188, 188, 188)
+
+@keyframes doAnim
+  to
+    stroke-dashoffset: 0
+
+
+.main
+  > .body
+    > .map
+      @include set-map-image(number)
+      @include set-map-image(random)
+      @include set-map-image(mic)
+      @include set-map-image(dial)
+      @include set-map-image(gyro)
+      @include set-map-image(button)
+      @include set-map-image(environment)
+      @include set-map-image(ir)
+      @include set-map-image(ultrasonic)
+      @include set-map-image(motor)
+      @include set-map-image(servo)
+      @include set-map-image(led)
+      @include set-map-image(speaker)
+      @include set-map-image(display)
+      @include set-map-image(speaker)
+      @include set-map-image(remote)
+      @include set-map-image(network)
+
+      height: 100%
+      position: absolute
+      right: 4px
+      margin: 0
+      background-color: $white-color
+      border: 1px solid $outline-color
+      border-radius: 4px
+      box-sizing: border-box
+
+      .mapBody
+        width: 100%
+        height: 100%
+        position: absolute
+        right: 0
+        top: 0
+
+        .modulemap
+          @include scrollbar-height(6px, 10px, 6px, $white-color, $scrollbar-color, $white-color)
+          @include scrollbar(6px, 10px, 6px, $white-color, $scrollbar-color, $white-color)
+          width: 100%
+          height: 100%
+          left: 0
+          top: 0
+          position: absolute
+          background-image: url('../image/dot.svg')
+          padding: 0
+          margin: 0
+          overflow: auto
+          white-space: nowrap
+
+        .jsplumb-connector
+          > path
+            stroke-dashoffset: 10px
+            animation: doAnim .5s linear
+            animation-iteration-count: infinite
+
+        .liverot
+          @include scrollbar-height(6px, 10px, 6px, $white-color, $scrollbar-color, $white-color)
+          @include scrollbar(6px, 10px, 6px, $white-color, $scrollbar-color, $white-color)
+          width: 100%
+          position: absolute
+          left: 0
+          top: 0
+          display: none
+
+        .mapmodule
+          width: 60px
+          height: 60px
+          position: absolute
+
+      .forBorder
+        width: 2px
+        height: 100%
+        position: absolute
+        top: 0
+        left: 0
+        background: $resizer-color
+        display: none
+
+      .module
+        width: 60px
+        height: 76px
+        float: left
+
+        .image
+          width: 100%
+          height: 60px
+          float: left
+
+        .text
+          width: 100%
+          height: 10px
+          float: left
+          font-size: 10px
+          text:
+            align: center
+            overflow: eliipsis
+          padding-top: 0
+          white-space: nowrap
+          cursor: default
+
+        .exit
+          width: 16px
+          height: 16px
+          position: absolute
+          right: 1px
+          top: 0
+          display: none
+          background-image: url('../image/block/boxExit.svg')
+
+        &:hover
+          .exit
+            display: block
+
+      .ui-draggable-dragging
+        opacity: .5
+
+      .dd-placeholder
+        display: none !important
+
+.dd-list
+  @include set-map-image(number)
+  @include set-map-image(random)
+  @include set-map-image(mic)
+  @include set-map-image(dial)
+  @include set-map-image(gyro)
+  @include set-map-image(button)
+  @include set-map-image(environment)
+  @include set-map-image(ir)
+  @include set-map-image(ultrasonic)
+  @include set-map-image(motor)
+  @include set-map-image(servo)
+  @include set-map-image(led)
+  @include set-map-image(speaker)
+  @include set-map-image(display)
+  @include set-map-image(remote)
+  @include set-map-image(network)

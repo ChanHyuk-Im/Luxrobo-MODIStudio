@@ -1,0 +1,30 @@
+{
+  "name": "LuxRoTIDE",
+  "description": "RoT IDE for Luxrobo",
+  "main": "app.js",
+  "authors": [
+    "NineTiger"
+  ],
+  "license": "CONFIDENTIAL",
+  "homepage": "www.luxrobo.com",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.2.0",
+    "requirejs": "~2.2.0",
+    "jquery-ui": "~1.11.4",
+    "jsPlumb": "~2.1.4",
+    "jquery-sieve": "~0.3.0",
+    "slider-pro": "~1.2.2",
+    "ace-build": "~1.2.3",
+    "hammerjs": "~2.0.0",
+    "dygraphs": "~1.1.1",
+    "jQuery-contextMenu": "~2.4.1"
+  }
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	    <!-- START CSS INCLUDE -->
+		<link href="css/wheelcolorpicker.css" rel="stylesheet" type="text/css"/>
+	    <LINK href="css/ide.css" rel="stylesheet" type="text/css"/>
+	    <LINK href="css/jquery-ui.min.css" rel="stylesheet" type="text/css"/>
+	    <LINK href="css/slider-pro.min.css" rel="stylesheet" type="text/css"/>
+	    <LINK href="css/jquery.contextMenu.css" rel="stylesheet" type="text/css"/>
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	    <!-- END CSS INCLUDE -->
+	    <script>
+	    	if( navigator.userAgent.indexOf("Electron") !== -1 ) {
+			    window.nodeRequire = require;
+				delete window.require;
+				delete window.exports;
+				delete window.module;
+			}
+	    </script>
+
+	    <script>
+			document.addEventListener("keydown", function (e) {
+				if (e.which === 191 && event.ctrlKey && event.altKey) {
+					nodeRequire("electron").remote.getCurrentWindow().toggleDevTools();
+				} 
+				// else 
+				// if (e.which === 116) {
+				// 	location.reload();
+				// }
+			});
+		</script>
+	</head>
+	<body style="display: block;" unselectable="on" onselectstart="return false;">
+		<!-- test body -->
+		<!-- START MAIN DIV -->
+		@@include('main.html')
+		<!-- END MAIN DIV -->
+		
+		<!-- START JS INCLUDE -->
+		<script type="text/javascript" data-main="js/ide" src="js/require.js"></script>		
+		<!-- <script src="js/ide.js"></script> -->
+		<!-- END JS INCLUDE -->
+	</body>
+</html>

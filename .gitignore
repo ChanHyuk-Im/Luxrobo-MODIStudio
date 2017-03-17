@@ -1,0 +1,16 @@
+node_modules/*
+*.swp
+bower_components/*
+dist/*
+!dist/fonts/
+!dist/image/
+!dist/image_mobile/
+!dist/video/
+!dist/app.js
+!dist/package.json
+src/css/common.css
+LuxRoTIDE/
+bin/
+builder/
+undefined/
+.vscode/*

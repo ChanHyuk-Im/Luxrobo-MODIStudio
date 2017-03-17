@@ -1,0 +1,399 @@
+$luxrobo-color: rgb(38, 202, 211)
+$empty-color: rgba(255, 255, 255, 0)
+$white-color: rgb(255, 255, 255)
+$red-color: rgb(255, 0, 0)
+
+
+$visible-white-color: rgba(255, 255, 255, 1)
+
+// color
+$outline-color: rgb(188, 188, 188)
+$scrollbar-color: rgb(230, 230, 230)
+$hover-color: rgb(37, 202, 211)
+
+//mixin
+@mixin box-shadow($spread, $color)
+  box-shadow: inset 0 0 #{$spread} #{$color}
+
+
+
+// _modulebox.sass
+
+$modulebox-background-color: rgb(230, 230, 230)
+$modulebox-border-color: rgb(188, 188, 188)
+$modulebox-group-color: rgb(255, 255, 255)
+$modulebox-search-color: rgb(109, 109, 109)
+
+@mixin webkit-scrollbar($width, $radius, $track-color, $thumb-color, $boxshadow-color)
+  &::-webkit-scrollbar-track
+    background-color: #{$track-color}
+
+  &::-webkit-scrollbar
+    border-radius: #{$radius}
+    width: #{$width}
+
+  &::-webkit-scrollbar-thumb
+    @include modal-box-shadow(inset, 0, 0, #{$width} / 3, #{$boxshadow-color})
+    width: #{$width}
+    border-radius: #{$radius}
+    background-color: #{$thumb-color}
+
+
+@mixin modulebox-image($icon-name)
+  .#{$icon-name}
+    > .image
+      background-image: url('../image/icon60/virtual/#{$icon-name}.svg')
+
+
+
+
+// _title.sass
+$editor-setting-height: 30px
+
+@mixin app-region-drag
+  -webkit-app-region: drag
+
+
+
+// _variables.sass
+@mixin cursor-point
+  cursor: point !important
+
+
+$html-border-color: rgb(147, 147, 147)
+
+
+// _modal.sass
+
+$black-color: rgb(0, 0, 0)
+
+$modal-upload-label-color: rgb(188, 188, 188)
+$modal-upload-scroll-track-color: rgb(241, 241, 241)
+$modal-upload-scroll-color: rgb(209, 209, 209)
+
+$modal-setting-background: rgb(167, 167, 167)
+$modal-setting-text-background: rgb(241, 241, 241)
+$modal-body-border: rgb(147, 147, 147)
+$modal-body-background-color: rgb(230, 230, 230)
+$modal-slider-active-color: rgb(188, 188, 188)
+
+$modal-meter-color: rgb(37, 202, 211)
+$modal-moduledetect-border-color: rgb(37, 202, 211)
+$modal-detect-color: rgb(167, 167, 167)
+
+$h-getting: 436px
+$h-getting-vedio: $h-getting - 40px
+
+$modal-boxshadow-color: rgba(0, 0, 0, .2)
+$modal-border-color: rgb(88, 88, 88)
+$modal-background-color: rgb(255, 255, 255)
+$modal-input-border-color: rgb(188, 188, 188)
+$modal-input-background-color: rgb(230, 230, 230)
+$scroll-color: rgba(0, 0, 0, .3)
+$scroll-track-color: rgba(0, 0, 0, 0)
+$modal-text-color: rgb(128, 128, 128)
+
+$color65: rgb(65, 65, 65)
+$color128: rgb(128, 128, 128)
+$color250: rgb(250, 250, 250)
+
+$modal-openproject-scroll-color: rgb(209, 209, 209)
+$modal-upload-label-color: rgb(188, 188, 188)
+$modal-upload-scroll-track-color: rgb(241, 241, 241)
+$modal-upload-scroll-color: rgb(209, 209, 209)
+
+$modal-button-gray-color: rgb(209, 209, 209)
+
+$modal-text-border-color: rgb(230, 230, 230)
+
+$modal-text-error-color: rgb(241, 90, 41)
+
+// TODO 이미지 생성되면 제거하기
+$colora: #f0f000
+$colorb: #f000f0
+$colorc: #00f0f0
+
+$box-shadow-color: rgba(0, 0, 0, .1)
+
+//mixin
+@mixin modal-box-shadow($hoff, $voff, $bd, $sd, $color)
+  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, .5)
+  -moz-box-shadow: 0 2px 5px rgba(0, 0, 0, .5)
+  -ms-box-shadow: 0 2px 5px rgba(0, 0, 0, .5)
+  -o-box-shadow: 0 2px 5px rgba(0, 0, 0, .5)
+  box-shadow: 0 2px 5px rgba(0, 0, 0, .5)
+  // box-shadow: #{$hoff} #{$voff} #{$bd} #{$sd} #{$color}
+
+@mixin scrollbar($size, $radius, $width, $shadow-color, $background, $track-background)
+  &::-webkit-scrollbar-track
+    -webkit-box-shadow: inset 0 0 #{$size} #{$shadow-color}
+    -moz-box-shadow: inset 0 0 #{$size} #{$shadow-color}
+    -ms-box-shadow: inset 0 0 #{$size} #{$shadow-color}
+    -o-box-shadow: inset 0 0 #{$size} #{$shadow-color}
+    box-shadow: inset 0 0 #{$size} #{$shadow-color}
+    border-radius: #{$radius}
+    background-color: #{$track-background}
+
+  &::-webkit-scrollbar
+    width: #{$width}
+    border-radius: #{$radius}
+    background-color: #{$background}
+
+  &::-webkit-scrollbar-thumb
+    width: 1px
+    border-radius: #{$radius}
+    -webkit-box-shadow: inset 0 0 #{$size} #{$shadow-color}
+    -moz-box-shadow: inset 0 0 #{$size} #{$shadow-color}
+    -ms-box-shadow: inset 0 0 #{$size} #{$shadow-color}
+    -o-box-shadow: inset 0 0 #{$size} #{$shadow-color}
+    box-shadow: inset 0 0 #{$size} #{$shadow-color}
+    background-color: #{$background}
+
+@mixin scrollbar-height($size, $radius, $height, $shadow-color, $background, $track-background)
+  &::-webkit-scrollbar-track
+    -webkit-box-shadow: inset 0 0 #{$size} #{$shadow-color}
+    -moz-box-shadow: inset 0 0 #{$size} #{$shadow-color}
+    -ms-box-shadow: inset 0 0 #{$size} #{$shadow-color}
+    -o-box-shadow: inset 0 0 #{$size} #{$shadow-color}
+    box-shadow: inset 0 0 #{$size} #{$shadow-color}
+    border-radius: #{$radius}
+    background-color: #{$track-background}
+
+  &::-webkit-scrollbar
+    height: #{$height}
+    border-radius: #{$radius}
+    background-color: #{$background}
+
+  &::-webkit-scrollbar-thumb
+    height: 1px
+    border-radius: #{$radius}
+    -webkit-box-shadow: inset 0 0 #{$size} #{$shadow-color}
+    -moz-box-shadow: inset 0 0 #{$size} #{$shadow-color}
+    -ms-box-shadow: inset 0 0 #{$size} #{$shadow-color}
+    -o-box-shadow: inset 0 0 #{$size} #{$shadow-color}
+    box-shadow: inset 0 0 #{$size} #{$shadow-color}
+    background-color: #{$background}
+
+@mixin modal-checkupdate-meter($background, $color)
+  &::meter-bar
+    background: #{$background}
+
+  &::meter-optimum-value
+    background: #{$color}
+
+  &::meter-suboptimum-value
+    background: #{$color}
+
+  &::meter-even-less-good-value
+    background: #{$color}
+    display: none
+
+
+
+
+//_palette.sass
+
+@mixin set-palette-image($type)
+  .image#{$type}
+    background-image: url('../image/palette/palette#{$type}.svg')
+
+    &:hover
+      background-image: url('../image/palette/palette#{$type}On.svg')
+
+
+
+
+//_map.sass
+@mixin set-map-image($type)
+  .#{$type}:not(.con):not(.discon)
+    .image
+      background:
+        image: url('../image/icon60/virtual/#{$type}.svg')
+        repeat: no-repeat
+
+  .#{$type}.con
+    .image
+      background:
+        image: url('../image/icon60/connect/#{$type}.svg')
+        repeat: no-repeat
+
+  .#{$type}.discon
+    .image
+      background:
+        image: url('../image/icon60/disconnect/#{$type}.svg')
+        repeat: no-repeat
+
+
+$box-list-width : 150px
+$box-bottom-wrapper-height : 210px
+$box-help-width : 380px
+
+$textBoxWidth: 120px
+$textBoxHeight: 30px
+$text-padding-side: 5px
+$module-width : 50px
+$module-height : 40px
+
+$block-height: 55px
+$block-width: 250px
+$box-wrapper-height : 55px
+
+$editor-box-if-border-color: rgb(98, 183, 0)
+
+$editor-boxlist-color: rgb(241, 241, 241)
+$editor-scroll-color: rgb(190, 190, 190)
+$editor-box-border-color: rgb(230, 230, 230)
+$editor-box-font-color: rgb(188, 188, 188)
+$editor-box-hover-color: rgb(209, 209, 209)
+$editor-comment-text-color: rgb(109, 109, 109)
+
+$editor-box-margin-top: ($box-wrapper-height - 30) /2
+
+@mixin editor-placeholder-color
+  &::-webkit-input-placeholder
+    color: $editor-box-font-color
+
+  &::-moz-placeholder
+    color: $editor-box-font-color
+
+  &::-ms-input-placeholder
+    color: $editor-box-font-color
+
+  &::-moz-placeholder
+    color: $editor-box-font-color
+
+
+@mixin placeholder-color($color)
+  &::-webkit-input-placeholder
+    color: #{$color}
+
+  &::-moz-placeholder
+    color: #{$color}
+
+  &::-ms-input-placeholder
+    color: #{$color}
+
+  &::-moz-placeholder
+    color: #{$color}
+
+
+$menusetting-arrow-color: rgba(0, 0, 0, 0)
+@mixin menusetting-arrow
+  display: none
+  width: 18px
+  height: 12px
+  position: absolute
+  top: 49px
+  background-color: $menusetting-arrow-color
+  border: 0
+  background: url('../image/etc/editorSettingArrow.svg') no-repeat
+
+$list-gradation-color: rgba(241, 241, 241, 1)
+
+@mixin animation-upper
+  -webkit-animation: blink 1s ease-in-out infinite
+  -moz-animation: blink 1s ease-in-out infinite
+  -ms-animation: blink 1s ease-in-out infinite
+  -o-animation: blink 1s ease-in-out infinite
+  animation: blink 1s ease-in-out infinite
+
+@-webkit-keyframes blink
+  0%
+    background-color: $outline-color
+
+  5%
+    background-color: $luxrobo-color
+
+  56%
+    background-color: $outline-color
+
+
+
+@mixin animation-display-drawing-text
+  -webkit-animation: display-text-blink 1s ease-in-out infinite
+  -moz-animation: display-text-blink 1s ease-in-out infinite
+  -ms-animation: display-text-blink 1s ease-in-out infinite
+  -o-animation: display-text-blink 1s ease-in-out infinite
+  animation: display-text-blink 1s ease-in-out infinite
+
+@-webkit-keyframes display-text-blink
+  0%
+    border-left: 1px solid $white-color
+
+  5%
+    border-left: 1px solid $luxrobo-color
+
+  56%
+    border-left: 1px solid $white-color
+
+
+
+$color-fcfff4: #fcfff4
+$color-dfe5d7: #dfe5d7
+$color-b3bead: #b3bead
+
+
+@mixin modal-upload-checkbox
+  background: #fcfff4
+  border: 1px solid $outline-color
+  box-sizing: border-box
+
+
+$color-error-message: rgb(239, 65, 54)
+
+@mixin input-range
+  overflow: hidden
+  width: 124px
+  border: 1px solid $white-color
+  background-color: rgb(209, 209, 209)
+  border-radius: 10px
+  -webkit-appearance: none
+  -moz-appearance: none
+  -ms-appearance: none
+  -o-appearance: none
+  appearance: none
+  -webkit-transform: rotate(270deg)
+  -moz-transform: rotate(270deg)
+  -ms-transform: rotate(270deg)
+  -o-transform: rotate(270deg)
+  transform: rotate(270deg)
+  box-sizing: border-box
+    
+  &::-webkit-slider-runnable-track
+    height: 10px
+    -webkit-appearance: none
+    -moz-appearance: none
+    -ms-appearance: none
+    -o-appearance: none
+    appearance: none
+    color: #13bba4
+    
+  &::-webkit-slider-thumb
+    width: 10px
+    height: 10px
+    border-radius: 5px
+    background: $white-color
+    border: 3px solid $white-color
+    z-index: 10
+    -webkit-appearance: none
+    -moz-appearance: none
+    -ms-appearance: none
+    -o-appearance: none
+    appearance: none
+    box-shadow: -80px 0 0 80px $white-color
+    box-sizing: border-box
+
+  &:focus
+    outline: none
+
+
+@mixin module-setting-switch-select
+  -webkit-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+  -o-user-select: none
+  user-select: none
+
+
+$network-setting-text-color: rgb(130, 130, 130)
+$battery-text-color: rgb(130, 130, 130)
